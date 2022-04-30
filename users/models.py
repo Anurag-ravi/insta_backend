@@ -1,4 +1,3 @@
-import re
 from django.db import models
 from django.contrib.auth.models import User
 # Create your models here.
@@ -18,7 +17,7 @@ class Profile(models.Model):
     followers = models.ManyToManyField('self',related_name='following',related_query_name='following',blank=True)
     close_friends = models.ManyToManyField('self',related_name='close_friend_of',related_query_name='close_friend_of',blank=True)
     req_rec = models.ManyToManyField('self',related_name='req_sent',related_query_name='req_sent',blank=True)
-    saved_posts = models.ManyToManyField('Post',related_name='saved_by',related_query_name='saved_by',blank=True)
+    saved_posts = models.ManyToManyField('feed.Post',related_name='saved_by',related_query_name='saved_by',blank=True)
     
     def __str__(self):
         return f'{self.username} profile'
