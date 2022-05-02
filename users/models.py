@@ -25,3 +25,7 @@ class Profile(models.Model):
 class VerifyTable(models.Model):
     hash = models.CharField(max_length=20,unique=True)
     email = models.CharField(max_length=200)
+
+class ResetTable(models.Model):
+    hash = models.CharField(max_length=20,unique=True)
+    email = models.CharField(max_length=200)
