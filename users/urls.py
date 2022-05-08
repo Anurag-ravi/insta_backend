@@ -6,4 +6,7 @@ urlpatterns = [
     path('verify_account/<str:hash>', views.verify_account),
     path('reset_password/', views.reset_pass),
     path('forgot_password/<str:hash>', views.forgot_pass),
+    path('check_username/', views.check_username),
+    path('update_profile/', views.update_profile),
+    path('follow/', views.follow),
 ]

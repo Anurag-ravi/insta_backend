@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 
 def dp_path(instance, filename):
     ext = filename.split('.')[-1]
-    return 'dp/profile-{}/dp.{}'.format(instance.id,ext)
+    return 'profile-{}/dp.{}'.format(instance.id,ext)
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)

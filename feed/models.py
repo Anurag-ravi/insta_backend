@@ -11,11 +11,11 @@ ACT_CHOICES = (
 )
 def post_path(instance, filename):
     ext = filename.split('.')[-1]
-    return 'posts/post-{}.{}'.format(instance.id,ext)
+    return 'profile-{}/posts/post-{}.{}'.format(instance.profile.id,instance.id,ext)
 
 
 class Post(models.Model):
-    creator = models.ForeignKey('users.Profile',on_delete=models.CASCADE)
+    creator = models.ForeignKey('users.Profile',on_delete=models.CASCADE,related_name='posts',related_query_name='posts')
     caption = models.CharField(max_length=500,blank=True,null=True)
     location = models.CharField(max_length=500,blank=True,null=True)
     tags = models.ManyToManyField('users.Profile',related_name='tagged_to',related_query_name='tagged_to',blank=True)

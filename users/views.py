@@ -8,6 +8,8 @@ from django.contrib.auth import authenticate
 from django.http import HttpResponse, JsonResponse
 from rest_framework.response import Response
 from rest_framework import status
+
+from users.decorators import login_is_required
 from .models import Profile, ResetTable, VerifyTable
 from .serializer import  ProfileSerializer
 from insta_backend import settings
@@ -75,7 +77,7 @@ def generate_token(profile):
     if profile.dp:
         url = profile.dp.url
     else:
-        url = NULL
+        url = None
     payload = {
         'user_id': profile.user.id,
         'profile_id': profile.id,
@@ -161,6 +163,7 @@ def forgot_pass(request,hash):
                 try:
                     context['error'] = ''
                     user.set_password(password)
+                    user.save()
                     entry.delete()
                     context['done'] = True
                 except:
@@ -170,3 +173,117 @@ def forgot_pass(request,hash):
             context['done'] = False
         return render(request,'users/reset_pass.html',context)
     return render(request,'users/error.html',{'error':'Invalid Password reset link'})
+
+def get_user_from_request(request):
+    token = request.headers['Authorization']
+    if not token:
+        return Response({"message":"unauthenticated"},status=status.HTTP_401_UNAUTHORIZED)
+    try:
+        payload = jwt.decode(token, settings.SECRET_KEY, algorithms=['HS256'])
+    except jwt.ExpiredSignatureError:
+        return Response({"message":"unauthenticated"},status=status.HTTP_401_UNAUTHORIZED)
+    
+    expires = int(time.time())
+    if(payload['exp'] < expires ):
+        return Response({"message":"unauthenticated"},status=status.HTTP_401_UNAUTHORIZED)
+    profile = Profile.objects.filter(id = payload['profile_id']).first()
+    if(profile):
+        return profile
+    return Response({"message":"unauthenticated"},status=status.HTTP_401_UNAUTHORIZED)
+
+def set_token(response,profile):
+    token = generate_token(profile)
+    response['jwt'] = token
+    response['Access-Control-Expose-Headers'] = 'jwt'
+
+@api_view(['POST'])
+def check_username(request):
+    data=json.loads(request.body)
+    username = data['username']
+    profile = Profile.objects.filter(username = username).first()
+    if not profile:
+        return Response({"message":"ok"},status=status.HTTP_200_OK)
+    return Response({"message":"no"},status=status.HTTP_400_BAD_REQUEST)
+
+@api_view(['PUT'])
+@login_is_required
+def update_profile(request):
+    profile = get_user_from_request(request)
+    serializer = ProfileSerializer(profile,data=request.data,partial=True)
+    
+    if not serializer.is_valid():
+        response = Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
+        set_token(response,profile)
+        return response
+
+    if serializer.is_valid():
+        serializer.save()
+        response = Response(serializer.data,status=status.HTTP_201_CREATED)
+        set_token(response,profile)
+        return response
+
+@api_view(['POST'])
+@login_is_required
+def follow(request):
+    data=json.loads(request.body)
+    try:
+        you = Profile.objects.filter(id = data['id']).first()
+        me = request.user
+        if me in you.followers.all():
+            you.followers.remove(me)
+            message = 'follow'
+        else:
+            you.followers.add(me)
+            message = 'unfollow'
+        you.save()
+        response = Response({"message":message},status=status.HTTP_200_OK)
+        set_token(response,me)
+        return response
+    except:
+        response = Response({"message":"no such user"},status=status.HTTP_400_BAD_REQUEST)
+        set_token(response,me)
+        return response
+
+@api_view(['POST'])
+@login_is_required
+def get_profile(request):
+    data=json.loads(request.body)
+    try:
+        profile = Profile.objects.filter(id = data['id']).first()
+        if profile.dp:
+            url = profile.dp.url
+        else:
+            url = None
+        res = {
+            'profile_id':profile.id,
+            'username':profile.username,
+            'verified':profile.verified,
+            'total_posts':profile.posts.all().count(),
+            'followers': profile.followers.all().count(),
+            'following': profile.following.all().count(),
+            'name': profile.name,
+            'bio': profile.bio,
+            'dp': url,
+        }
+        their_followers = profile.followers.all()
+        my_followers = request.user.followers.all()
+        mutual_friends = their_followers.intersection(my_followers)
+        res['mutual_friends'] = mutual_friends.count()
+        one = mutual_friends.first()
+        res['mutual_friend_one'] = one.username
+        if one.dp:
+            url = one.dp.url
+        else:
+            url = None
+        res['mutual_friend_one_dp'] = url
+        if request.user in profile.followers.all():
+            res['me_following']=False
+        else:
+            res['me_following']=True
+        res['posts'] = []
+        c = 1
+        for post in profile.posts.all().order_by('-timedate'):
+            res['posts'].append({'id':c,'url':post.image.url})
+        
+    except:
+        profile = request.user
