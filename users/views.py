@@ -1,14 +1,10 @@
-from asyncio.windows_events import NULL
 import datetime
-from pickle import TRUE
 import random
 import string
 from django.shortcuts import render
 from django.contrib.auth import authenticate
-from django.http import HttpResponse, JsonResponse
 from rest_framework.response import Response
 from rest_framework import status
-
 from users.decorators import login_is_required
 from .models import Profile, ResetTable, VerifyTable
 from .serializer import  ProfileSerializer
@@ -17,8 +13,6 @@ from django.contrib.auth.models import User
 from django.core.mail import send_mail
 import jwt,json,time
 from rest_framework.decorators import api_view
-from rest_framework.exceptions import AuthenticationFailed
-from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 
 @api_view(['POST'])
@@ -81,13 +75,6 @@ def generate_token(profile):
     payload = {
         'user_id': profile.user.id,
         'profile_id': profile.id,
-        'username': profile.username,
-        'name': profile.name,
-        'bio': profile.bio,
-        'verified': profile.verified,
-        'dp': url,
-        'followers': profile.followers.all().count(),
-        'following': profile.following.all().count(),
         'exp':datetime.datetime.utcnow()+ datetime.timedelta(days=30),
         'iat':datetime.datetime.utcnow()
     }
@@ -244,27 +231,30 @@ def follow(request):
         set_token(response,me)
         return response
 
-@api_view(['POST'])
+@api_view(['GET'])
 @login_is_required
 def get_profile(request):
     data=json.loads(request.body)
     try:
         profile = Profile.objects.filter(id = data['id']).first()
-        if profile.dp:
-            url = profile.dp.url
-        else:
-            url = None
-        res = {
-            'profile_id':profile.id,
-            'username':profile.username,
-            'verified':profile.verified,
-            'total_posts':profile.posts.all().count(),
-            'followers': profile.followers.all().count(),
-            'following': profile.following.all().count(),
-            'name': profile.name,
-            'bio': profile.bio,
-            'dp': url,
-        }
+    except:
+        profile = request.user
+    if profile.dp:
+        url = profile.dp.url
+    else:
+        url = None
+    res = {
+        'profile_id':profile.id,
+        'username':profile.username,
+        'verified':profile.verified,
+        'total_posts':profile.posts.all().count(),
+        'followers': profile.followers.all().count(),
+        'following': profile.following.all().count(),
+        'name': profile.name,
+        'bio': profile.bio,
+        'dp': url,
+    }
+    if profile != request.user:
         their_followers = profile.followers.all()
         my_followers = request.user.followers.all()
         mutual_friends = their_followers.intersection(my_followers)
@@ -280,10 +270,50 @@ def get_profile(request):
             res['me_following']=False
         else:
             res['me_following']=True
-        res['posts'] = []
-        c = 1
-        for post in profile.posts.all().order_by('-timedate'):
-            res['posts'].append({'id':c,'url':post.image.url})
+    res['posts'] = []
+    c = 1
+    for post in profile.posts.all().order_by('-timedate'):
+        res['posts'].append({'id':c,'url':post.image.url})
+    jsondata = json.dumps(res)
+    response = Response(jsondata,status=status.HTTP_200_OK)
+    set_token(response,request.user)
+    return response
+
+@api_view(['GET'])
+@login_is_required
+def follow_suggestion(request):
+    res = []
+    me = request.user
+    rest_people = Profile.objects.all().difference(me.followers)
+    for profile in rest_people:
+        if profile == me:
+            continue
+        score = 0
+        follows = False
+        if me in profile.followers.all():
+            follows = True
+            score += 50
+        their_followers = profile.followers.all()
+        my_followers = me.followers.all()
+        mutual_friends = their_followers.intersection(my_followers)
+        score += mutual_friends.count() * 2
+        fname = mutual_friends.first().name
+        if profile.dp:
+            url = profile.dp.url
+        else:
+            url = None
+        ele = {
+            'dp':url,
+            'score':score,
+            'name':profile.name,
+            'follows_me':follows,
+            'followed_by':f'{fname} + {mutual_friends.count()} others',
+        }
+        res.append(ele)
+    res.sort(key=lambda x : x['score'],reverse=True)
+    jsondata = json.dumps(res)
+    response = Response(jsondata,status=status.HTTP_200_OK)
+    set_token(response,request.user)
+    return response
+
         
-    except:
-        profile = request.user
