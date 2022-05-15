@@ -23,11 +23,11 @@ def register(request):
         password = data['password']
         user,created= create_or_get_user(request,email,password)
         if created:
-            return Response(f'Account verification link sent to {email}',status=status.HTTP_201_CREATED)
-        return Response(f'User with this email id already exists',status=status.HTTP_400_BAD_REQUEST)
+            return Response({'message':f'Account verification link sent to {email}'},status=status.HTTP_201_CREATED)
+        return Response({'message':f'User with this email id already exists'},status=status.HTTP_400_BAD_REQUEST)
     except:
         print("error")
-        return Response('some error occured',status=status.HTTP_400_BAD_REQUEST)
+        return Response({'message':'some error occured'},status=status.HTTP_400_BAD_REQUEST)
 
 def create_or_get_user(request,email,password=None):
     user = User.objects.filter(email=email).first()
@@ -83,7 +83,7 @@ def generate_token(profile):
 
 @api_view(['POST'])
 def login(request):
-    try:
+    # try:
         data=json.loads(request.body)
         email = data['email']
         password = data['password']
@@ -101,9 +101,9 @@ def login(request):
                 return response
             return Response({"message":"Please Verify your account first"},status=status.HTTP_400_BAD_REQUEST)
         return Response({"message":"invalid email/password"},status=status.HTTP_400_BAD_REQUEST)
-    except:
-        print("error")
-        return Response('some error occured',status=status.HTTP_400_BAD_REQUEST)
+    # except:
+    #     print("error")
+    #     return Response({"message":"some error occured, please try after sometime"},status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['POST'])
 def reset_pass(request):
@@ -111,7 +111,7 @@ def reset_pass(request):
     email = data['email']
     user = User.objects.filter(email=email).first()
     if not user:
-        return Response({"message":"invalid email"},status=status.HTTP_400_BAD_REQUEST)
+        return Response({"message":"No such user exists"},status=status.HTTP_400_BAD_REQUEST)
     # create url for verification
     while True:
         hash = ''.join(random.choices(string.ascii_letters, k=20))
@@ -129,7 +129,7 @@ def reset_pass(request):
         )
         print('email sent')
         break
-    return Response({"message":"Password reset link is sent to the email"},status=status.HTTP_200_OK)
+    return Response({"message":f"Password reset link is sent to the {email}"},status=status.HTTP_200_OK)
 
 
 def forgot_pass(request,hash):
