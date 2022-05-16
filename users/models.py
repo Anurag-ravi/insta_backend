@@ -1,11 +1,11 @@
+from datetime import datetime
 from django.db import models
 from django.contrib.auth.models import User
 # Create your models here.
 
 
 def dp_path(instance, filename):
-    ext = filename.split('.')[-1]
-    return 'profile-{}/dp.{}'.format(instance.id,ext)
+    return 'profile-{}/{}'.format(instance.id,str(datetime.today()) + filename)
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)

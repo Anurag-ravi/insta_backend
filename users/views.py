@@ -227,11 +227,11 @@ def follow(request):
         set_token(response,me)
         return response
 
-@api_view(['GET'])
+@api_view(['GET','POST'])
 @login_is_required
 def get_profile(request):
-    data=json.loads(request.body)
     try:
+        data=json.loads(request.body)
         profile = Profile.objects.filter(username = data['username']).first()
     except:
         profile = request.user
@@ -254,10 +254,10 @@ def get_profile(request):
         their_followers = profile.followers.all()
         my_followers = request.user.followers.all()
         mutual_friends = their_followers.intersection(my_followers)
-        res['mutual_friends'] = mutual_friends.count()
         res['first_mutual'] = []
         c = 0
-        while c < 3 and mutual_friends.count() > 3:
+        n = mutual_friends.count()
+        while c < 3 and n > 0:
             one = mutual_friends[c]
             if one.dp:
                 url = one.dp.url
@@ -268,10 +268,18 @@ def get_profile(request):
                 'url':url,
             })
             c = c+1
-        if request.user in profile.followers.all():
+            n = n-1
+        if c == 3:
+            c = 2
+        res['mutual_friends'] = mutual_friends.count() - c
+        if request.user not in profile.followers.all():
             res['me_following']=False
         else:
             res['me_following']=True
+    else:
+        res['mutual_friends'] = 0
+        res['first_mutual'] = []
+        res['me_following']=True
     res['posts'] = []
     res['tags'] = []
     for post in profile.posts.all().order_by('-timedate'):
