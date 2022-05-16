@@ -68,10 +68,6 @@ def verify_account(request,hash):
     return render(request,'users/error.html',{'error':'Invalid Account Verification link'})
 
 def generate_token(profile):
-    if profile.dp:
-        url = profile.dp.url
-    else:
-        url = None
     payload = {
         'user_id': profile.user.id,
         'profile_id': profile.id,
@@ -214,7 +210,7 @@ def update_profile(request):
 def follow(request):
     data=json.loads(request.body)
     try:
-        you = Profile.objects.filter(id = data['id']).first()
+        you = Profile.objects.filter(username = data['username']).first()
         me = request.user
         if me in you.followers.all():
             you.followers.remove(me)
@@ -236,13 +232,13 @@ def follow(request):
 def get_profile(request):
     data=json.loads(request.body)
     try:
-        profile = Profile.objects.filter(id = data['id']).first()
+        profile = Profile.objects.filter(username = data['username']).first()
     except:
         profile = request.user
     if profile.dp:
         url = profile.dp.url
     else:
-        url = None
+        url = ''
     res = {
         'profile_id':profile.id,
         'username':profile.username,
@@ -259,21 +255,29 @@ def get_profile(request):
         my_followers = request.user.followers.all()
         mutual_friends = their_followers.intersection(my_followers)
         res['mutual_friends'] = mutual_friends.count()
-        one = mutual_friends.first()
-        res['mutual_friend_one'] = one.username
-        if one.dp:
-            url = one.dp.url
-        else:
-            url = None
-        res['mutual_friend_one_dp'] = url
+        res['first_mutual'] = []
+        c = 0
+        while c < 3 and mutual_friends.count() > 3:
+            one = mutual_friends[c]
+            if one.dp:
+                url = one.dp.url
+            else:
+                url = ''
+            res['first_mutual'].append({
+                'username':one.username,
+                'url':url,
+            })
+            c = c+1
         if request.user in profile.followers.all():
             res['me_following']=False
         else:
             res['me_following']=True
     res['posts'] = []
-    c = 1
+    res['tags'] = []
     for post in profile.posts.all().order_by('-timedate'):
-        res['posts'].append({'id':c,'url':post.image.url})
+        res['posts'].append({'id':post.id,'url':post.image.url})
+    for post in profile.tagged_to.all().order_by('-timedate'):
+        res['tags'].append({'id':post.id,'url':post.image.url})
     jsondata = json.dumps(res)
     response = Response(jsondata,status=status.HTTP_200_OK)
     set_token(response,request.user)
@@ -301,7 +305,7 @@ def follow_suggestion(request):
         if profile.dp:
             url = profile.dp.url
         else:
-            url = None
+            url = ''
         ele = {
             'dp':url,
             'score':score,
