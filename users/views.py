@@ -91,8 +91,12 @@ def login(request):
         if user is not None:
             if user.is_active:
                 profile = Profile.objects.filter(user=user).first()
+                if profile.dp:
+                    url = profile.dp.url
+                else:
+                    url = ''
                 encoded_jwt = generate_token(profile)
-                response = Response({"message":"success","jwt":encoded_jwt},status=status.HTTP_200_OK)
+                response = Response({"message":"success","jwt":encoded_jwt,"dp":url,"username":profile.username},status=status.HTTP_200_OK)
                 response['jwt'] = encoded_jwt
                 return response
             return Response({"message":"Please Verify your account first"},status=status.HTTP_400_BAD_REQUEST)
@@ -219,6 +223,7 @@ def follow(request):
             you.followers.add(me)
             message = 'unfollow'
         you.save()
+        print(you.username)
         response = Response({"message":message},status=status.HTTP_200_OK)
         set_token(response,me)
         return response
@@ -291,41 +296,95 @@ def get_profile(request):
     set_token(response,request.user)
     return response
 
-@api_view(['GET'])
-@login_is_required
-def follow_suggestion(request):
+def get_suggestion(me):
     res = []
-    me = request.user
-    rest_people = Profile.objects.all().difference(me.followers)
+    rest_people = Profile.objects.all().difference(me.following.all())
     for profile in rest_people:
         if profile == me:
             continue
         score = 0
         follows = False
-        if me in profile.followers.all():
+        if me in profile.following.all():
             follows = True
             score += 50
         their_followers = profile.followers.all()
         my_followers = me.followers.all()
         mutual_friends = their_followers.intersection(my_followers)
         score += mutual_friends.count() * 2
-        fname = mutual_friends.first().name
         if profile.dp:
             url = profile.dp.url
         else:
             url = ''
+        if mutual_friends.count() == 0:
+            by = ''
+        if mutual_friends.count() == 1:
+            fname = mutual_friends.first().name
+            by = f'{fname}'
+        if mutual_friends.count() > 1:
+            fname = mutual_friends.first().name
+            by = f'{fname} + {mutual_friends.count() - 1} others'
         ele = {
-            'dp':url,
-            'score':score,
+            'url':url,
+            'username':profile.username,
             'name':profile.name,
+            'me_following':False,
             'follows_me':follows,
-            'followed_by':f'{fname} + {mutual_friends.count()} others',
+            'followed_by':by,
+            'score':score,
         }
         res.append(ele)
     res.sort(key=lambda x : x['score'],reverse=True)
+    return res
+
+@api_view(['GET'])
+@login_is_required
+def follow_suggestion(request):
+    res = get_suggestion(request.user)
     jsondata = json.dumps(res)
     response = Response(jsondata,status=status.HTTP_200_OK)
     set_token(response,request.user)
     return response
 
         
+@api_view(['GET','POST'])
+@login_is_required
+def get_followers(request):
+    try:
+        data=json.loads(request.body)
+        profile = Profile.objects.filter(username = data['username']).first()
+    except:
+        profile = request.user
+    
+    res = {
+        'mutual': [],
+        'followers': [],
+        'following': [],
+        'suggestion': [],
+    }
+    for people in profile.followers.all():
+        if people.dp:
+            url = people.dp.url
+        else:
+            url = ''
+        res['followers'].append({'url':url,'username':people.username,'name':people.name,'me_following': people in request.user.following.all()})
+    for people in profile.following.all():
+        if people.dp:
+            url = people.dp.url
+        else:
+            url = ''
+        res['following'].append({'url':url,'username':people.username,'name':people.name,'me_following': people in request.user.following.all()})
+    if request.user != profile:
+        their_followers = profile.followers.all()
+        my_followers = request.user.followers.all()
+        mutual_friends = their_followers.intersection(my_followers)
+        for people in mutual_friends:
+            if people.dp:
+                url = people.dp.url
+            else:
+                url = ''
+            res['mutual'].append({'url':url,'username':people.username,'name':people.name,'me_following': people in request.user.following.all()})
+        res['suggestion'] = get_suggestion(request.user)
+    jsondata = json.dumps(res)
+    response = Response(jsondata,status=status.HTTP_200_OK)
+    set_token(response,request.user)
+    return response
