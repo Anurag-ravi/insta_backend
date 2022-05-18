@@ -184,29 +184,31 @@ def set_token(response,profile):
     response['Access-Control-Expose-Headers'] = 'jwt'
 
 @api_view(['POST'])
+@login_is_required
 def check_username(request):
     data=json.loads(request.body)
     username = data['username']
     profile = Profile.objects.filter(username = username).first()
     if not profile:
         return Response({"message":"ok"},status=status.HTTP_200_OK)
+    if profile == request.user:
+        return Response({"message":"ok"},status=status.HTTP_200_OK)
     return Response({"message":"no"},status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['PUT'])
 @login_is_required
 def update_profile(request):
-    profile = get_user_from_request(request)
-    serializer = ProfileSerializer(profile,data=request.data,partial=True)
+    serializer = ProfileSerializer(request.user,data=request.data,partial=True)
     
     if not serializer.is_valid():
         response = Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
-        set_token(response,profile)
+        set_token(response,request.user)
         return response
 
     if serializer.is_valid():
         serializer.save()
-        response = Response(serializer.data,status=status.HTTP_201_CREATED)
-        set_token(response,profile)
+        response = Response(serializer.data,status=status.HTTP_200_OK)
+        set_token(response,request.user)
         return response
 
 @api_view(['POST'])

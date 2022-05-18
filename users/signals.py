@@ -19,12 +19,12 @@ def delete_associated_files(sender, instance, **kwargs):
 def pre_save_image(sender, instance, *args, **kwargs):
     """ instance old image file will delete from os """
     try:
-        old_img = Profile.objects.get(id=instance.id).dp
+        old_img = Profile.objects.get(id=instance.id).dp.path
         try:
-            new_img = instance.image
+            new_img = instance.dp.path
         except:
             new_img = None
         if new_img != old_img:
-            default_storage.delete(old_img.name)
+            default_storage.delete(old_img)
     except:
         pass
