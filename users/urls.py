@@ -8,6 +8,7 @@ urlpatterns = [
     path('forgot_password/<str:hash>', views.forgot_pass),
 
     path('check_username/', views.check_username),
+    path('search/', views.get_search_result),
     path('update_profile/', views.update_profile),
     path('profile/', views.get_profile),
     

@@ -1,5 +1,7 @@
 import datetime
 from functools import partial
+import re
+from pytz import utc
 from rest_framework.response import Response
 from rest_framework import status
 from users.decorators import login_is_required
@@ -70,25 +72,16 @@ def delete_post(request,id):
     set_token(response,request.user)
     return response
 
-@api_view(['GET'])
-@login_is_required
-def get_post(request,id):
-    try:
-        post = Post.objects.get(id=id)
-    except:
-        response = Response({"message":"no such post"},status=status.HTTP_404_NOT_FOUND)
-        set_token(response,request.user)
-        return response
+def json_post(post,me):
     if post.creator.dp:
         url = post.creator.dp.url
     else:
         url = None
-    liked = request.user in post.likes.all()
-    saved = request.user in post.saved_by.all()
+    liked = me in post.likes.all()
+    saved = me in post.saved_by.all()
     likes = post.likes.all()
     data = {
         'id':post.id,
-        'author_id':post.creator.id,
         'author_dp':url,
         'author_username':post.creator.username,
         'location':post.location,
@@ -101,7 +94,7 @@ def get_post(request,id):
         'comment_count':post.comment_set.all().count()
     }
     time_created = post.timedate
-    time_now = timezone.datetime()
+    time_now = datetime.datetime.now(tz=utc)
     diff = time_now - time_created
     days = diff.days
     seconds = diff.seconds
@@ -131,7 +124,7 @@ def get_post(request,id):
 
     find = False
     for profile in likes:
-        if profile in request.user.following.all():
+        if profile in me.following.all():
                 data['first_like'] = profile.username
                 if profile.dp:
                     url2 = profile.dp.url
@@ -144,9 +137,46 @@ def get_post(request,id):
         data['like_count'] = likes.count() - 1
     else:
         data['like_count'] = likes.count()
+    return data
     
-    jsondata = json.dumps(data)
+
+@api_view(['GET'])
+@login_is_required
+def get_post(request,id):
+    try:
+        post = Post.objects.get(id=id)
+    except:
+        response = Response({"message":"no such post"},status=status.HTTP_404_NOT_FOUND)
+        set_token(response,request.user)
+        return response
+    
+    jsondata = json.dumps(json_post(post,request.user))
     response = Response(jsondata,status=status.HTTP_200_OK)
     set_token(response,request.user)
     return response
+
+def create_feed(me,index):
+    feed = []
+    load_count = 5
+    following = list(me.following.all())
+    following.append(me)
+    for profile in following:
+        for post in profile.posts.all():
+            feed.append(post)
+    feed.sort(key=lambda x:x.timedate,reverse=True)
+    res = []
+    if len(feed)>index*load_count:
+        for post in feed[index*load_count:min(len(feed),load_count*(index+1))]:
+            res.append(json_post(post,me))
+    return res
+
+
+@api_view(['GET'])
+@login_is_required
+def get_feed(request,index):
+    feed = create_feed(request.user,index)
+    response = Response(feed,status=status.HTTP_200_OK)
+    set_token(response,request.user)
+    return response
+
 

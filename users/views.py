@@ -13,6 +13,7 @@ from django.contrib.auth.models import User
 from django.core.mail import send_mail
 import jwt,json,time
 from rest_framework.decorators import api_view
+from fuzzywuzzy import fuzz
 # Create your views here.
 
 @api_view(['POST'])
@@ -389,4 +390,43 @@ def get_followers(request):
     jsondata = json.dumps(res)
     response = Response(jsondata,status=status.HTTP_200_OK)
     set_token(response,request.user)
+    return response
+
+def search(query, me):
+    res = []
+    all_profile = Profile.objects.all()
+    for profile in all_profile:
+        if profile == me:
+            continue
+        s2 = fuzz.partial_ratio(query, profile.name)
+        s3 = fuzz.partial_ratio(query, profile.bio)
+        s1 = fuzz.partial_ratio(query, profile.username)
+        score = (2 * s1) + (2 * s2) + s3
+        if score > 50:
+            if profile.dp:
+                url = profile.dp.url
+            else:
+                url = ''
+            ele = {
+                'url':url,
+                'username':profile.username,
+                'name':profile.name,
+                'me_following': profile in me.following.all(),
+                'score':score
+            }
+            res.append(ele)
+    res.sort(key=lambda x : x['score'],reverse=True)
+    return res
+
+@api_view(['POST'])
+@login_is_required
+def get_search_result(request):
+    res = []
+    try:
+        data=json.loads(request.body)
+        res = search(data['query'],request.user)
+    except:
+        pass
+    jsondata = json.dumps(res)
+    response = Response(jsondata,status=status.HTTP_200_OK)
     return response
