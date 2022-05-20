@@ -20,7 +20,7 @@ class Post(models.Model):
     location = models.CharField(max_length=500,blank=True,null=True)
     tags = models.ManyToManyField('users.Profile',related_name='tagged_to',related_query_name='tagged_to',blank=True)
     image = models.ImageField(upload_to=post_path)
-    timedate = models.DateTimeField(default=timezone.datetime.today)
+    timedate = models.DateTimeField(default=timezone.datetime.now)
     likes = models.ManyToManyField('users.Profile',related_name='liked_posts',related_query_name='liked_posts',blank=True)
 
     def __str__(self):
@@ -31,7 +31,7 @@ class Comment(models.Model):
     likes = models.ManyToManyField('users.Profile',related_name='liked_comments',related_query_name='liked_comments',blank=True)
     tags = models.ManyToManyField('users.Profile',related_name='tagged_to_comment',related_query_name='tagged_to_comment',blank=True)
     content = models.CharField(max_length=500,blank=True,null=True)
-    timedate = models.DateTimeField(default=timezone.datetime.today)
+    timedate = models.DateTimeField(default=timezone.datetime.now)
     replied_to = models.ForeignKey('self',on_delete=models.CASCADE,blank=True,null=True)
     post = models.ForeignKey('Post',on_delete=models.CASCADE)
 
@@ -40,7 +40,7 @@ class Comment(models.Model):
 
 class Story(models.Model):
     creator = models.ForeignKey('users.Profile',on_delete=models.CASCADE)
-    timedate = models.DateTimeField(default=timezone.datetime.today)
+    timedate = models.DateTimeField(default=timezone.datetime.now)
     image = models.ImageField(upload_to=post_path,blank=True,null=True)
     seen = models.ManyToManyField('users.Profile',related_name='seen_stories',related_query_name='seen_stories',blank=True)
     close = models.BooleanField(default=False)
@@ -49,7 +49,7 @@ class Story(models.Model):
 
 class Activity(models.Model):
     of = models.ForeignKey('users.Profile',related_name='activity',related_query_name='activity',on_delete=models.CASCADE)
-    timedate = models.DateTimeField(default=timezone.datetime.today)
+    timedate = models.DateTimeField(default=timezone.datetime.now)
     category = models.CharField(max_length=20,choices=ACT_CHOICES)
     post = models.ForeignKey('Post',on_delete=models.CASCADE,blank=True,null=True)
     comment = models.ForeignKey('Comment',on_delete=models.CASCADE,blank=True,null=True)

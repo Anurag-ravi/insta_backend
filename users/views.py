@@ -97,7 +97,7 @@ def login(request):
                 else:
                     url = ''
                 encoded_jwt = generate_token(profile)
-                response = Response({"message":"success","jwt":encoded_jwt,"dp":url,"username":profile.username},status=status.HTTP_200_OK)
+                response = Response({"message":"success","jwt":encoded_jwt,"dp":url,"username":profile.username,"id":profile.id},status=status.HTTP_200_OK)
                 response['jwt'] = encoded_jwt
                 return response
             return Response({"message":"Please Verify your account first"},status=status.HTTP_400_BAD_REQUEST)
@@ -327,6 +327,7 @@ def get_suggestion(me):
             fname = mutual_friends.first().name
             by = f'{fname} + {mutual_friends.count() - 1} others'
         ele = {
+            'id':profile.id,
             'url':url,
             'username':profile.username,
             'name':profile.name,
@@ -408,6 +409,7 @@ def search(query, me):
             else:
                 url = ''
             ele = {
+                'id':profile.id,
                 'url':url,
                 'username':profile.username,
                 'name':profile.name,
