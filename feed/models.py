@@ -24,7 +24,7 @@ class Post(models.Model):
     likes = models.ManyToManyField('users.Profile',related_name='liked_posts',related_query_name='liked_posts',blank=True)
 
     def __str__(self):
-        return f'{self.caption}'
+        return f'{self.caption} {self.creator.username}'
 
 class Comment(models.Model):
     commentor = models.ForeignKey('users.Profile',on_delete=models.CASCADE)

@@ -1,5 +1,7 @@
+import base64
 import datetime
 from functools import partial
+from io import BytesIO
 import re
 from pytz import utc
 from rest_framework.response import Response
@@ -12,6 +14,7 @@ from django.core.mail import send_mail
 import jwt,json,time
 from rest_framework.decorators import api_view
 from django.utils import timezone
+from PIL import Image,ImageFilter
 
 # Create your views here.
 @api_view(['POST'])
@@ -129,6 +132,23 @@ def delete_comment(request,index):
     response = Response(status=status.HTTP_204_NO_CONTENT)
     set_token(response,request.user)
     return response
+def getImageBytes(imagePath):
+    img = Image.open(imagePath)
+    h = img.height
+    w = img.width
+    new_w = 50
+    new_h = (h * new_w) // w
+    img.thumbnail((new_w,new_h))
+    img.filter(ImageFilter.BLUR)
+    buffered = BytesIO()
+    img.save(buffered,format=img.format)
+    b = base64.b64encode(buffered.getvalue())
+    b = b.decode('utf-8')
+    string_image = str(b)
+    ratio = h/w
+    return string_image,ratio
+
+
 
 def json_post(post,me):
     if post.creator.dp:
@@ -138,12 +158,15 @@ def json_post(post,me):
     liked = me in post.likes.all()
     saved = me in post.saved_by.all()
     likes = post.likes.all()
+    byt,ratio = getImageBytes(post.image.path)
     data = {
         'id':post.id,
         'author_dp':url,
         'author_username':post.creator.username,
         'location':post.location,
         'image':post.image.url,
+        'bytes':byt,
+        'ratio':ratio,
         'liked':liked,
         'saved':saved,
         'caption':post.caption,
@@ -174,7 +197,7 @@ def json_post(post,me):
             if months == 0:
                 delta = f'{days} days ago'
             else:
-                delta = f'{months} month, {days} days ago'
+                delta = f'{months} month ago'
         else:
             delta = f'{years} year ago'
     

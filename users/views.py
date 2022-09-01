@@ -18,17 +18,19 @@ from fuzzywuzzy import fuzz
 
 @api_view(['POST'])
 def register(request):
-    try:
+    # try:
         data=json.loads(request.body)
         email = data['email']
         password = data['password']
         user,created= create_or_get_user(request,email,password)
         if created:
+            print('link sent')
             return Response({'message':f'Account verification link sent to {email}'},status=status.HTTP_201_CREATED)
+        print('user exists')
         return Response({'message':f'User with this email id already exists'},status=status.HTTP_400_BAD_REQUEST)
-    except:
-        print("error")
-        return Response({'message':'some error occured'},status=status.HTTP_400_BAD_REQUEST)
+    # except:
+    #     print("error")
+    #     return Response({'message':'some error occured'},status=status.HTTP_400_BAD_REQUEST)
 
 def create_or_get_user(request,email,password=None):
     user = User.objects.filter(email=email).first()

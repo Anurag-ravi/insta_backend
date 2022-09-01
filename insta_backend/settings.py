@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-)357m_+^9w7d82ojg3-8li#6z=9^e=ce-pwc0-va!g-zmvvukw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['157.245.108.226','localhost','0.0.0.0']
+ALLOWED_HOSTS = ['157.245.108.226','localhost','0.0.0.0','192.168.0.101']
 
 
 # Application definition
@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    'django_archive',
     'rest_framework',
 ]
 
@@ -139,6 +139,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
+# # backup settings
+# DBBACKUP_STORAGE = 'django.core.files.storage.FileSystemStorage'
+# DBBACKUP_STORAGE_OPTIONS = {'location': os.path.join(BASE_DIR, 'backups')}
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
@@ -148,5 +152,5 @@ EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'teaminstaclone@gmail.com'
-EMAIL_HOST_PASSWORD = 'ydktnunsfkhbeada'
+EMAIL_HOST_PASSWORD = 'tovyhuknljyhnisw'
 EMAIL_USE_TLS = True
