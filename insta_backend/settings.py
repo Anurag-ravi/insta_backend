@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-)357m_+^9w7d82ojg3-8li#6z=9^e=ce-pwc0-va!g-zmvvukw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['157.245.108.226','localhost','0.0.0.0','192.168.0.101']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_archive',
     'rest_framework',
+     'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -51,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'insta_backend.urls'
@@ -154,3 +156,8 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'teaminstaclone@gmail.com'
 EMAIL_HOST_PASSWORD = 'tovyhuknljyhnisw'
 EMAIL_USE_TLS = True
+
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_WHITELIST = (
+  'http://127.0.0.1:5500',
+)

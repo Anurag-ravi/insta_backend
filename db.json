@@ -1,1 +1,1791 @@
-[{"model": "users.profile", "pk": 2, "fields": {"user": 2, "username": "anu.rag__r", "name": "Anurag Ravi", "bio": "Navodayan+Dakshanite, IITG CSE 24,Passionate for photography", "verified": true, "dp": "profile-2/2022-05-20_200246.209224image_picker1486540881818920508.jpg", "followers": [4, 3, 6, 7, 12], "close_friends": [], "req_rec": [], "saved_posts": [1]}}, {"model": "users.profile", "pk": 3, "fields": {"user": 3, "username": "online_destroyed", "name": "Veer", "bio": "aji mera....beep...", "verified": false, "dp": "profile-3/2022-05-21_131252.139260image_picker1327364289742046533.png", "followers": [2, 4, 6], "close_friends": [], "req_rec": [], "saved_posts": []}}, {"model": "users.profile", "pk": 4, "fields": {"user": 4, "username": "kiranpragya2003@gmail.com", "name": "", "bio": "", "verified": false, "dp": "", "followers": [3, 2, 6], "close_friends": [], "req_rec": [], "saved_posts": [1]}}, {"model": "users.profile", "pk": 5, "fields": {"user": 6, "username": "adityakumarjnv2002@gmail.com", "name": "", "bio": "", "verified": false, "dp": "", "followers": [6, 2], "close_friends": [], "req_rec": [], "saved_posts": []}}, {"model": "users.profile", "pk": 6, "fields": {"user": 8, "username": "Mohit Chouhan", "name": "Mohit Chouhan", "bio": "Ken di hundi si🥲🥲                                                                    Chan tk rah bna de                                               aur                                                                                     fir sb khatam🚫", "verified": false, "dp": "", "followers": [2, 6, 3], "close_friends": [], "req_rec": [], "saved_posts": []}}, {"model": "users.profile", "pk": 7, "fields": {"user": 9, "username": "bishop8743@gmail.com", "name": "", "bio": "", "verified": false, "dp": "", "followers": [2, 6], "close_friends": [], "req_rec": [], "saved_posts": []}}, {"model": "users.profile", "pk": 8, "fields": {"user": 10, "username": "sumankumarnst@gmail.com", "name": "", "bio": "", "verified": false, "dp": "", "followers": [2, 6], "close_friends": [], "req_rec": [], "saved_posts": []}}, {"model": "users.profile", "pk": 9, "fields": {"user": 11, "username": "chandan.dak216@gmail.com", "name": "", "bio": "", "verified": false, "dp": "", "followers": [2, 6], "close_friends": [], "req_rec": [], "saved_posts": []}}, {"model": "users.profile", "pk": 10, "fields": {"user": 12, "username": "gaanamusic7@gmail.com", "name": "", "bio": "", "verified": false, "dp": "", "followers": [2], "close_friends": [], "req_rec": [], "saved_posts": []}}, {"model": "users.profile", "pk": 11, "fields": {"user": 15, "username": "Pragat.gupta777@gmail.com", "name": "", "bio": "", "verified": false, "dp": "", "followers": [2], "close_friends": [], "req_rec": [], "saved_posts": []}}, {"model": "users.profile", "pk": 12, "fields": {"user": 16, "username": "Sa8827619@gmail.com", "name": "sachin", "bio": "", "verified": false, "dp": "profile-12/2022-05-23_110158.922125image_picker5813183228429251440.jpg", "followers": [2], "close_friends": [], "req_rec": [], "saved_posts": []}}, {"model": "users.verifytable", "pk": 4, "fields": {"hash": "UDZjCfTuPMIrhuUKekxT", "email": "arvinddakshana20@gmail.com"}}, {"model": "users.verifytable", "pk": 12, "fields": {"hash": "tmNtoCzRuVNBANvvingL", "email": "mk8002275003@gmail.com"}}, {"model": "users.verifytable", "pk": 13, "fields": {"hash": "PLpGAxDlfSJhhDFpGBCW", "email": "ashu.dak20@gmail.com"}}, {"model": "feed.post", "pk": 1, "fields": {"creator": 2, "caption": "the first post........", "location": "Home as always", "image": "profile-2/posts/post-None.jpg", "timedate": "2022-05-20T14:33:29.005Z", "tags": [], "likes": [2, 4, 3, 12]}}, {"model": "feed.post", "pk": 2, "fields": {"creator": 4, "caption": "hostle", "location": "nitk", "image": "profile-4/posts/post-None.jpg", "timedate": "2022-05-20T16:55:28.884Z", "tags": [], "likes": [3, 2]}}, {"model": "feed.post", "pk": 3, "fields": {"creator": 3, "caption": "", "location": "", "image": "profile-3/posts/post-None.jpg", "timedate": "2022-05-21T00:09:08.918Z", "tags": [], "likes": [2, 3]}}, {"model": "feed.post", "pk": 4, "fields": {"creator": 2, "caption": "#iit_guwahati 😍😍😍", "location": "IIT Guwahati", "image": "profile-2/posts/post-None_QVODWu4.jpg", "timedate": "2022-05-21T01:25:45.041Z", "tags": [], "likes": [2, 3, 12]}}, {"model": "feed.post", "pk": 5, "fields": {"creator": 6, "caption": "chill🥴", "location": "", "image": "profile-6/posts/post-None.jpg", "timedate": "2022-05-21T04:29:34.354Z", "tags": [], "likes": [2, 3]}}, {"model": "feed.post", "pk": 6, "fields": {"creator": 3, "caption": "", "location": "", "image": "profile-3/posts/post-None_BDRImpi.jpg", "timedate": "2022-05-21T07:43:40.777Z", "tags": [], "likes": [3, 2]}}, {"model": "feed.post", "pk": 9, "fields": {"creator": 3, "caption": "", "location": "", "image": "profile-3/posts/post-None_EZHd3Pj.gif", "timedate": "2022-05-21T07:44:31.252Z", "tags": [], "likes": [3, 2]}}, {"model": "feed.post", "pk": 11, "fields": {"creator": 3, "caption": "", "location": "", "image": "profile-3/posts/post-None_r7mCyTb.jpg", "timedate": "2022-05-21T07:45:57.325Z", "tags": [], "likes": [3, 2]}}, {"model": "feed.post", "pk": 12, "fields": {"creator": 3, "caption": "", "location": "", "image": "profile-3/posts/post-None_8EkZ7CU.jpg", "timedate": "2022-05-21T07:46:54.159Z", "tags": [], "likes": [3, 2, 4]}}, {"model": "feed.post", "pk": 13, "fields": {"creator": 2, "caption": "phool hai gulab ka, chameli ka mt smjhna😉", "location": "home", "image": "profile-2/posts/post-None_N0sHKTN.jpg", "timedate": "2022-05-21T09:37:06.888Z", "tags": [], "likes": [2, 3, 12, 4]}}, {"model": "feed.post", "pk": 14, "fields": {"creator": 11, "caption": "test", "location": "home", "image": "profile-11/posts/post-None.jpg", "timedate": "2022-05-21T11:08:05.440Z", "tags": [], "likes": [2]}}, {"model": "feed.post", "pk": 15, "fields": {"creator": 11, "caption": "test", "location": "home", "image": "profile-11/posts/post-None_y9Pc7T6.jpg", "timedate": "2022-05-21T11:08:21.459Z", "tags": [], "likes": [2]}}, {"model": "feed.post", "pk": 16, "fields": {"creator": 11, "caption": "test", "location": "home", "image": "profile-11/posts/post-None_xNKkdOk.jpg", "timedate": "2022-05-21T11:08:23.126Z", "tags": [], "likes": [2]}}, {"model": "feed.post", "pk": 17, "fields": {"creator": 11, "caption": "test", "location": "home", "image": "profile-11/posts/post-None_OgUtgFZ.jpg", "timedate": "2022-05-21T11:08:24.614Z", "tags": [], "likes": [2]}}, {"model": "feed.post", "pk": 18, "fields": {"creator": 4, "caption": "", "location": "", "image": "profile-4/posts/post-None_BMD5Rvh.jpg", "timedate": "2022-05-22T11:27:28.345Z", "tags": [], "likes": [3, 2]}}, {"model": "feed.comment", "pk": 1, "fields": {"commentor": 2, "content": "the first comment😍", "timedate": "2022-05-20T14:34:31.922Z", "replied_to": null, "post": 1, "likes": [2], "tags": []}}, {"model": "feed.comment", "pk": 3, "fields": {"commentor": 2, "content": "noice", "timedate": "2022-05-21T00:53:42.130Z", "replied_to": null, "post": 2, "likes": [], "tags": []}}, {"model": "feed.comment", "pk": 4, "fields": {"commentor": 2, "content": "hehehehe😂", "timedate": "2022-05-21T00:54:05.985Z", "replied_to": null, "post": 3, "likes": [2], "tags": []}}, {"model": "feed.comment", "pk": 5, "fields": {"commentor": 4, "content": "nice college ☺️", "timedate": "2022-05-21T06:12:45.055Z", "replied_to": null, "post": 4, "likes": [2], "tags": []}}, {"model": "feed.comment", "pk": 6, "fields": {"commentor": 4, "content": "🥺🥺 hey bhgwan", "timedate": "2022-05-21T06:13:05.671Z", "replied_to": null, "post": 3, "likes": [2], "tags": []}}, {"model": "feed.comment", "pk": 7, "fields": {"commentor": 2, "content": "😂😂😂😂😂", "timedate": "2022-05-21T08:23:52.047Z", "replied_to": null, "post": 6, "likes": [], "tags": []}}, {"model": "feed.comment", "pk": 8, "fields": {"commentor": 2, "content": "@pk 😊😊😊", "timedate": "2022-05-21T08:25:25.069Z", "replied_to": null, "post": 4, "likes": [], "tags": []}}, {"model": "feed.comment", "pk": 9, "fields": {"commentor": 3, "content": "maal ho tum....sheli ko mat smjhna", "timedate": "2022-05-22T19:22:57.010Z", "replied_to": null, "post": 13, "likes": [], "tags": []}}, {"model": "feed.comment", "pk": 10, "fields": {"commentor": 4, "content": "tastyyyy", "timedate": "2022-05-23T13:38:00.998Z", "replied_to": null, "post": 11, "likes": [], "tags": []}}, {"model": "feed.comment", "pk": 11, "fields": {"commentor": 2, "content": "😂😂😂😂😂😂😂", "timedate": "2022-05-23T13:39:46.872Z", "replied_to": null, "post": 13, "likes": [], "tags": []}}, {"model": "admin.logentry", "pk": 1, "fields": {"action_time": "2022-05-20T14:01:08.045Z", "user": 1, "content_type": 1, "object_id": "1", "object_repr": "bb profile", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 2, "fields": {"action_time": "2022-05-20T14:14:17.143Z", "user": 1, "content_type": 1, "object_id": "1", "object_repr": "bb profile", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 3, "fields": {"action_time": "2022-05-20T15:21:37.622Z", "user": 1, "content_type": 1, "object_id": "2", "object_repr": "anu.rag__r profile", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Verified\"]}}]"}}, {"model": "admin.logentry", "pk": 4, "fields": {"action_time": "2022-05-21T05:02:45.255Z", "user": 1, "content_type": 11, "object_id": "7", "object_repr": "mohit123@gmail.com", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 5, "fields": {"action_time": "2022-05-22T04:39:09.381Z", "user": 1, "content_type": 2, "object_id": "6", "object_repr": "VerifyTable object (6)", "action_flag": 3, "change_message": ""}}, {"model": "auth.user", "pk": 1, "fields": {"password": "pbkdf2_sha256$320000$UHhNuSRHYgI6QckuIYFMn1$MY6y9jT9NKApUhoFAF7QbvNQ1kA/Z4Yr93sn3swftxk=", "last_login": "2022-05-20T15:21:20.851Z", "is_superuser": true, "username": "bb", "first_name": "", "last_name": "", "email": "bb@bb.com", "is_staff": true, "is_active": true, "date_joined": "2022-05-20T12:46:56.889Z", "groups": [], "user_permissions": []}}, {"model": "auth.user", "pk": 2, "fields": {"password": "pbkdf2_sha256$320000$d0EXdWltM8siNCiqJnofLo$CjUt1XxjeBaIGlRiy5WbkLOC9aPR4c9Jlunij98+8lc=", "last_login": null, "is_superuser": false, "username": "kumarayush1014@gmail.com", "first_name": "", "last_name": "", "email": "kumarayush1014@gmail.com", "is_staff": false, "is_active": true, "date_joined": "2022-05-20T14:30:22.905Z", "groups": [], "user_permissions": []}}, {"model": "auth.user", "pk": 3, "fields": {"password": "pbkdf2_sha256$320000$x2XbCymXyTY4T45UpCzdTD$IioQnCbd65bTWnbSSbe5TRbV3uBVcVPuxPbdXRZy7wA=", "last_login": null, "is_superuser": false, "username": "singhveerbahadur18@gmail.com", "first_name": "", "last_name": "", "email": "singhveerbahadur18@gmail.com", "is_staff": false, "is_active": true, "date_joined": "2022-05-20T15:54:46.823Z", "groups": [], "user_permissions": []}}, {"model": "auth.user", "pk": 4, "fields": {"password": "pbkdf2_sha256$320000$IVw3SaVXwINiLCNhJcAsW5$Nps+WG7Ac8NiQsoYYGNqYrjZW7T+lDdzwL9T8ZDT3oI=", "last_login": null, "is_superuser": false, "username": "kiranpragya2003@gmail.com", "first_name": "", "last_name": "", "email": "kiranpragya2003@gmail.com", "is_staff": false, "is_active": true, "date_joined": "2022-05-20T16:52:54.521Z", "groups": [], "user_permissions": []}}, {"model": "auth.user", "pk": 5, "fields": {"password": "pbkdf2_sha256$320000$Ws6X1Zqz4KGywvHmuE2LHY$1l8WGYud5LFarP5pZ52kSHx3CaLl2+U028IgCNIXQuE=", "last_login": null, "is_superuser": false, "username": "arvinddakshana20@gmail.com", "first_name": "", "last_name": "", "email": "arvinddakshana20@gmail.com", "is_staff": false, "is_active": false, "date_joined": "2022-05-21T04:17:21.614Z", "groups": [], "user_permissions": []}}, {"model": "auth.user", "pk": 6, "fields": {"password": "pbkdf2_sha256$320000$QTtRHgbTpsHED9rbR1DYKP$RTMbVSZXu4nZzBn9pA6Ri6/dl7L2NrVYHk3/n6SXkGg=", "last_login": null, "is_superuser": false, "username": "adityakumarjnv2002@gmail.com", "first_name": "", "last_name": "", "email": "adityakumarjnv2002@gmail.com", "is_staff": false, "is_active": true, "date_joined": "2022-05-21T04:18:47.797Z", "groups": [], "user_permissions": []}}, {"model": "auth.user", "pk": 8, "fields": {"password": "pbkdf2_sha256$320000$SKWLyw0Qiw6diyD6MiNBX6$COeRpSQyoEzf/R2iWDsGr/7eWAup+IN+HOWqo7rtV/U=", "last_login": null, "is_superuser": false, "username": "mchouhan.daan20@gmail.com", "first_name": "", "last_name": "", "email": "mchouhan.daan20@gmail.com", "is_staff": false, "is_active": true, "date_joined": "2022-05-21T04:25:15.349Z", "groups": [], "user_permissions": []}}, {"model": "auth.user", "pk": 9, "fields": {"password": "pbkdf2_sha256$320000$DSgUVuq40qO75ptUiY12uU$NOoBcgoqtm48S569dUVKqvZ38SUkMBiYZxJsV+4dikk=", "last_login": null, "is_superuser": false, "username": "bishop8743@gmail.com", "first_name": "", "last_name": "", "email": "bishop8743@gmail.com", "is_staff": false, "is_active": true, "date_joined": "2022-05-21T04:26:55.090Z", "groups": [], "user_permissions": []}}, {"model": "auth.user", "pk": 10, "fields": {"password": "pbkdf2_sha256$320000$R4G1DBYhsXyji3BCrVdSEo$N09BJprPg05ygA6WgcqIdSasKPIB6XrXx3EbyKQINz4=", "last_login": null, "is_superuser": false, "username": "sumankumarnst@gmail.com", "first_name": "", "last_name": "", "email": "sumankumarnst@gmail.com", "is_staff": false, "is_active": true, "date_joined": "2022-05-21T04:28:42.436Z", "groups": [], "user_permissions": []}}, {"model": "auth.user", "pk": 11, "fields": {"password": "pbkdf2_sha256$320000$ltAPVcTmsVoo1gybQjdEoi$+YnVg4C2GDj/ozPauK2e78Ol6NsZjVBEy2HNL7MqwB0=", "last_login": null, "is_superuser": false, "username": "chandan.dak216@gmail.com", "first_name": "", "last_name": "", "email": "chandan.dak216@gmail.com", "is_staff": false, "is_active": true, "date_joined": "2022-05-21T04:33:27.561Z", "groups": [], "user_permissions": []}}, {"model": "auth.user", "pk": 12, "fields": {"password": "pbkdf2_sha256$320000$FBOXa6IhyvYBG4i5BmgGvO$vMlQEEmRys6a3EWWVmr/TQxMCZ6vz5MD7hiawMsgVIk=", "last_login": null, "is_superuser": false, "username": "gaanamusic7@gmail.com", "first_name": "", "last_name": "", "email": "gaanamusic7@gmail.com", "is_staff": false, "is_active": true, "date_joined": "2022-05-21T04:41:33.922Z", "groups": [], "user_permissions": []}}, {"model": "auth.user", "pk": 13, "fields": {"password": "pbkdf2_sha256$320000$Mw8WRNSjfOU2syU9njhfZq$SKRxJiohYwGjE5BAclQWCaA0W31Gl8IF3RBTWuMunN8=", "last_login": null, "is_superuser": false, "username": "mk8002275003@gmail.com", "first_name": "", "last_name": "", "email": "mk8002275003@gmail.com", "is_staff": false, "is_active": false, "date_joined": "2022-05-21T04:41:50.089Z", "groups": [], "user_permissions": []}}, {"model": "auth.user", "pk": 14, "fields": {"password": "pbkdf2_sha256$320000$MXXTEUZcwNOf0F1xobjETi$esgVvlboqmVrj/Lttz5VTb//IM+smdHgn1XgnFfmfaY=", "last_login": null, "is_superuser": false, "username": "ashu.dak20@gmail.com", "first_name": "", "last_name": "", "email": "ashu.dak20@gmail.com", "is_staff": false, "is_active": false, "date_joined": "2022-05-21T05:18:25.937Z", "groups": [], "user_permissions": []}}, {"model": "auth.user", "pk": 15, "fields": {"password": "pbkdf2_sha256$320000$MAt16T5A3GR26SFPiQ13hZ$K9hiu6pouiIZ1f8imInIdnNzgXXIBmftUJiytn9Q84M=", "last_login": null, "is_superuser": false, "username": "Pragat.gupta777@gmail.com", "first_name": "", "last_name": "", "email": "Pragat.gupta777@gmail.com", "is_staff": false, "is_active": true, "date_joined": "2022-05-21T11:05:04.841Z", "groups": [], "user_permissions": []}}, {"model": "auth.user", "pk": 16, "fields": {"password": "pbkdf2_sha256$320000$kiYAx3QAsXOOMw6fukWTSy$rObqEicvS2ObWhvTbvvblBLuSF2jwxDOvhOrN0WXSYM=", "last_login": null, "is_superuser": false, "username": "Sa8827619@gmail.com", "first_name": "", "last_name": "", "email": "Sa8827619@gmail.com", "is_staff": false, "is_active": true, "date_joined": "2022-05-23T05:28:54.008Z", "groups": [], "user_permissions": []}}, {"model": "sessions.session", "pk": "iyvz1ycbebfe0mp1s4p4jl2yr6snsi2r", "fields": {"session_data": ".eJxVjEEOwiAQRe_C2hBG6QAu3XuGZmAGqRpISrsy3l2bdKHb_977LzXSupRx7TKPE6uzAnX43SKlh9QN8J3qrenU6jJPUW-K3mnX18byvOzu30GhXr41mhRDBPDA-WT5mBlh8Di4kJBFsiAn642BDGRtMJ7JOTLkCYgDRvX-AOhIODA:1ns4RM:wbLstBCR8Kna4usS7g05SFGRXPMHG8wbkBOfRJSC0_8", "expire_date": "2022-06-03T15:21:20.852Z"}}, {"model": "sessions.session", "pk": "pwu7027vnfuc8y2c81yuu775yealj8ll", "fields": {"session_data": ".eJxVjEEOwiAQRe_C2hBG6QAu3XuGZmAGqRpISrsy3l2bdKHb_977LzXSupRx7TKPE6uzAnX43SKlh9QN8J3qrenU6jJPUW-K3mnX18byvOzu30GhXr41mhRDBPDA-WT5mBlh8Di4kJBFsiAn642BDGRtMJ7JOTLkCYgDRvX-AOhIODA:1ns25i:XzPNeWiiFpBt2PTl-3HpecuPYfA5BLjWBAZdKo10DTw", "expire_date": "2022-06-03T12:50:50.304Z"}}]
+[
+  {
+    "model": "users.profile",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "username": "anu.rag__r",
+      "name": "Anurag Ravi",
+      "bio": "Navodayan+Dakshanite, IITG CSE 24,Passionate for photography",
+      "verified": true,
+      "dp": "profile-2/2022-05-20_200246.209224image_picker1486540881818920508.jpg",
+      "followers": [3, 4, 6, 7, 12, 13, 14],
+      "close_friends": [],
+      "req_rec": [],
+      "saved_posts": [1]
+    }
+  },
+  {
+    "model": "users.profile",
+    "pk": 3,
+    "fields": {
+      "user": 3,
+      "username": "online_destroyed",
+      "name": "Veer",
+      "bio": "aji mera....beep...",
+      "verified": false,
+      "dp": "profile-3/2022-05-21_131252.139260image_picker1327364289742046533.png",
+      "followers": [2, 4, 6, 13],
+      "close_friends": [],
+      "req_rec": [],
+      "saved_posts": []
+    }
+  },
+  {
+    "model": "users.profile",
+    "pk": 4,
+    "fields": {
+      "user": 4,
+      "username": "kiranpragya2003@gmail.com",
+      "name": "",
+      "bio": "",
+      "verified": false,
+      "dp": "",
+      "followers": [2, 3, 6, 13],
+      "close_friends": [],
+      "req_rec": [],
+      "saved_posts": [1]
+    }
+  },
+  {
+    "model": "users.profile",
+    "pk": 5,
+    "fields": {
+      "user": 6,
+      "username": "adityakumarjnv2002@gmail.com",
+      "name": "",
+      "bio": "",
+      "verified": false,
+      "dp": "",
+      "followers": [2, 6],
+      "close_friends": [],
+      "req_rec": [],
+      "saved_posts": []
+    }
+  },
+  {
+    "model": "users.profile",
+    "pk": 6,
+    "fields": {
+      "user": 8,
+      "username": "Mohit Chouhan",
+      "name": "Mohit Chouhan",
+      "bio": "Ken di hundi si🥲🥲 Chan tk rah bna de aur fir sb khatam🚫",
+      "verified": false,
+      "dp": "",
+      "followers": [2, 3, 6, 13],
+      "close_friends": [],
+      "req_rec": [],
+      "saved_posts": []
+    }
+  },
+  {
+    "model": "users.profile",
+    "pk": 7,
+    "fields": {
+      "user": 9,
+      "username": "bishop8743@gmail.com",
+      "name": "",
+      "bio": "",
+      "verified": false,
+      "dp": "",
+      "followers": [2, 6],
+      "close_friends": [],
+      "req_rec": [],
+      "saved_posts": []
+    }
+  },
+  {
+    "model": "users.profile",
+    "pk": 8,
+    "fields": {
+      "user": 10,
+      "username": "sumankumarnst@gmail.com",
+      "name": "",
+      "bio": "",
+      "verified": false,
+      "dp": "",
+      "followers": [2, 6],
+      "close_friends": [],
+      "req_rec": [],
+      "saved_posts": []
+    }
+  },
+  {
+    "model": "users.profile",
+    "pk": 9,
+    "fields": {
+      "user": 11,
+      "username": "chandan.dak216@gmail.com",
+      "name": "",
+      "bio": "",
+      "verified": false,
+      "dp": "",
+      "followers": [2, 6],
+      "close_friends": [],
+      "req_rec": [],
+      "saved_posts": []
+    }
+  },
+  {
+    "model": "users.profile",
+    "pk": 10,
+    "fields": {
+      "user": 12,
+      "username": "gaanamusic7@gmail.com",
+      "name": "",
+      "bio": "",
+      "verified": false,
+      "dp": "",
+      "followers": [2],
+      "close_friends": [],
+      "req_rec": [],
+      "saved_posts": []
+    }
+  },
+  {
+    "model": "users.profile",
+    "pk": 11,
+    "fields": {
+      "user": 15,
+      "username": "Pragat.gupta777@gmail.com",
+      "name": "",
+      "bio": "",
+      "verified": false,
+      "dp": "",
+      "followers": [2, 13],
+      "close_friends": [],
+      "req_rec": [],
+      "saved_posts": []
+    }
+  },
+  {
+    "model": "users.profile",
+    "pk": 12,
+    "fields": {
+      "user": 16,
+      "username": "Sa8827619@gmail.com",
+      "name": "sachin",
+      "bio": "",
+      "verified": false,
+      "dp": "profile-12/2022-05-23_110158.922125image_picker5813183228429251440.jpg",
+      "followers": [2],
+      "close_friends": [],
+      "req_rec": [],
+      "saved_posts": []
+    }
+  },
+  {
+    "model": "users.profile",
+    "pk": 13,
+    "fields": {
+      "user": 18,
+      "username": "prrtk",
+      "name": "Pratik Choudhury",
+      "bio": "iit kharagpur",
+      "verified": false,
+      "dp": "profile-13/2022-07-10_181144.483964image_picker513867367695457089.jpg",
+      "followers": [2, 3, 4, 8],
+      "close_friends": [],
+      "req_rec": [],
+      "saved_posts": []
+    }
+  },
+  {
+    "model": "users.profile",
+    "pk": 14,
+    "fields": {
+      "user": 22,
+      "username": "r.bhanu",
+      "name": "Bhanu Rajput",
+      "bio": "sakht launda",
+      "verified": false,
+      "dp": "profile-14/2022-07-30_121805.331427image_picker1676674432585250455.jpg",
+      "followers": [2],
+      "close_friends": [],
+      "req_rec": [],
+      "saved_posts": []
+    }
+  },
+  {
+    "model": "feed.post",
+    "pk": 1,
+    "fields": {
+      "creator": 2,
+      "caption": "the first post........",
+      "location": "Home as always",
+      "image": "profile-2/posts/post-None.jpg",
+      "timedate": "2022-05-20T14:33:29.005Z",
+      "tags": [],
+      "likes": [2, 3, 4, 12]
+    }
+  },
+  {
+    "model": "feed.post",
+    "pk": 2,
+    "fields": {
+      "creator": 4,
+      "caption": "hostle",
+      "location": "nitk",
+      "image": "profile-4/posts/post-None.jpg",
+      "timedate": "2022-05-20T16:55:28.884Z",
+      "tags": [],
+      "likes": [2, 3]
+    }
+  },
+  {
+    "model": "feed.post",
+    "pk": 3,
+    "fields": {
+      "creator": 3,
+      "caption": "",
+      "location": "",
+      "image": "profile-3/posts/post-None.jpg",
+      "timedate": "2022-05-21T00:09:08.918Z",
+      "tags": [],
+      "likes": [2, 3]
+    }
+  },
+  {
+    "model": "feed.post",
+    "pk": 4,
+    "fields": {
+      "creator": 2,
+      "caption": "#iit_guwahati 😍😍😍",
+      "location": "IIT Guwahati",
+      "image": "profile-2/posts/post-None_QVODWu4.jpg",
+      "timedate": "2022-05-21T01:25:45.041Z",
+      "tags": [],
+      "likes": [2, 3, 12, 14]
+    }
+  },
+  {
+    "model": "feed.post",
+    "pk": 5,
+    "fields": {
+      "creator": 6,
+      "caption": "chill🥴",
+      "location": "",
+      "image": "profile-6/posts/post-None.jpg",
+      "timedate": "2022-05-21T04:29:34.354Z",
+      "tags": [],
+      "likes": [2, 3]
+    }
+  },
+  {
+    "model": "feed.post",
+    "pk": 6,
+    "fields": {
+      "creator": 3,
+      "caption": "",
+      "location": "",
+      "image": "profile-3/posts/post-None_BDRImpi.jpg",
+      "timedate": "2022-05-21T07:43:40.777Z",
+      "tags": [],
+      "likes": [2, 3]
+    }
+  },
+  {
+    "model": "feed.post",
+    "pk": 11,
+    "fields": {
+      "creator": 3,
+      "caption": "",
+      "location": "",
+      "image": "profile-3/posts/post-None_r7mCyTb.jpg",
+      "timedate": "2022-05-21T07:45:57.325Z",
+      "tags": [],
+      "likes": [2, 3]
+    }
+  },
+  {
+    "model": "feed.post",
+    "pk": 12,
+    "fields": {
+      "creator": 3,
+      "caption": "",
+      "location": "",
+      "image": "profile-3/posts/post-None_8EkZ7CU.jpg",
+      "timedate": "2022-05-21T07:46:54.159Z",
+      "tags": [],
+      "likes": [2, 3, 4]
+    }
+  },
+  {
+    "model": "feed.post",
+    "pk": 13,
+    "fields": {
+      "creator": 2,
+      "caption": "phool hai gulab ka, chameli ka mt smjhna😉",
+      "location": "home",
+      "image": "profile-2/posts/post-None_N0sHKTN.jpg",
+      "timedate": "2022-05-21T09:37:06.888Z",
+      "tags": [],
+      "likes": [2, 3, 4, 12, 13, 14]
+    }
+  },
+  {
+    "model": "feed.post",
+    "pk": 14,
+    "fields": {
+      "creator": 11,
+      "caption": "test",
+      "location": "home",
+      "image": "profile-11/posts/post-None.jpg",
+      "timedate": "2022-05-21T11:08:05.440Z",
+      "tags": [],
+      "likes": [2]
+    }
+  },
+  {
+    "model": "feed.post",
+    "pk": 15,
+    "fields": {
+      "creator": 11,
+      "caption": "test",
+      "location": "home",
+      "image": "profile-11/posts/post-None_y9Pc7T6.jpg",
+      "timedate": "2022-05-21T11:08:21.459Z",
+      "tags": [],
+      "likes": [2]
+    }
+  },
+  {
+    "model": "feed.post",
+    "pk": 16,
+    "fields": {
+      "creator": 11,
+      "caption": "test",
+      "location": "home",
+      "image": "profile-11/posts/post-None_xNKkdOk.jpg",
+      "timedate": "2022-05-21T11:08:23.126Z",
+      "tags": [],
+      "likes": [2]
+    }
+  },
+  {
+    "model": "feed.post",
+    "pk": 17,
+    "fields": {
+      "creator": 11,
+      "caption": "test",
+      "location": "home",
+      "image": "profile-11/posts/post-None_OgUtgFZ.jpg",
+      "timedate": "2022-05-21T11:08:24.614Z",
+      "tags": [],
+      "likes": [2]
+    }
+  },
+  {
+    "model": "feed.post",
+    "pk": 18,
+    "fields": {
+      "creator": 4,
+      "caption": "",
+      "location": "",
+      "image": "profile-4/posts/post-None_BMD5Rvh.jpg",
+      "timedate": "2022-05-22T11:27:28.345Z",
+      "tags": [],
+      "likes": [2, 3]
+    }
+  },
+  {
+    "model": "feed.post",
+    "pk": 19,
+    "fields": {
+      "creator": 13,
+      "caption": "sunkissed😛",
+      "location": "IIT Kharagpur",
+      "image": "profile-13/posts/post-None.jpg",
+      "timedate": "2022-07-10T12:44:01.489Z",
+      "tags": [],
+      "likes": [2, 13]
+    }
+  },
+  {
+    "model": "feed.post",
+    "pk": 20,
+    "fields": {
+      "creator": 14,
+      "caption": "chatai",
+      "location": "Jay disang",
+      "image": "profile-14/posts/post-None.jpg",
+      "timedate": "2022-07-30T06:49:58.914Z",
+      "tags": [],
+      "likes": [2]
+    }
+  },
+  {
+    "model": "feed.comment",
+    "pk": 1,
+    "fields": {
+      "commentor": 2,
+      "content": "the first comment😍",
+      "timedate": "2022-05-20T14:34:31.922Z",
+      "replied_to": null,
+      "post": 1,
+      "likes": [2],
+      "tags": []
+    }
+  },
+  {
+    "model": "feed.comment",
+    "pk": 3,
+    "fields": {
+      "commentor": 2,
+      "content": "noice",
+      "timedate": "2022-05-21T00:53:42.130Z",
+      "replied_to": null,
+      "post": 2,
+      "likes": [],
+      "tags": []
+    }
+  },
+  {
+    "model": "feed.comment",
+    "pk": 4,
+    "fields": {
+      "commentor": 2,
+      "content": "hehehehe😂",
+      "timedate": "2022-05-21T00:54:05.985Z",
+      "replied_to": null,
+      "post": 3,
+      "likes": [2],
+      "tags": []
+    }
+  },
+  {
+    "model": "feed.comment",
+    "pk": 5,
+    "fields": {
+      "commentor": 4,
+      "content": "nice college ☺️",
+      "timedate": "2022-05-21T06:12:45.055Z",
+      "replied_to": null,
+      "post": 4,
+      "likes": [2],
+      "tags": []
+    }
+  },
+  {
+    "model": "feed.comment",
+    "pk": 6,
+    "fields": {
+      "commentor": 4,
+      "content": "🥺🥺 hey bhgwan",
+      "timedate": "2022-05-21T06:13:05.671Z",
+      "replied_to": null,
+      "post": 3,
+      "likes": [2],
+      "tags": []
+    }
+  },
+  {
+    "model": "feed.comment",
+    "pk": 7,
+    "fields": {
+      "commentor": 2,
+      "content": "😂😂😂😂😂",
+      "timedate": "2022-05-21T08:23:52.047Z",
+      "replied_to": null,
+      "post": 6,
+      "likes": [],
+      "tags": []
+    }
+  },
+  {
+    "model": "feed.comment",
+    "pk": 8,
+    "fields": {
+      "commentor": 2,
+      "content": "@pk 😊😊😊",
+      "timedate": "2022-05-21T08:25:25.069Z",
+      "replied_to": null,
+      "post": 4,
+      "likes": [],
+      "tags": []
+    }
+  },
+  {
+    "model": "feed.comment",
+    "pk": 9,
+    "fields": {
+      "commentor": 3,
+      "content": "maal ho tum....sheli ko mat smjhna",
+      "timedate": "2022-05-22T19:22:57.010Z",
+      "replied_to": null,
+      "post": 13,
+      "likes": [],
+      "tags": []
+    }
+  },
+  {
+    "model": "feed.comment",
+    "pk": 10,
+    "fields": {
+      "commentor": 4,
+      "content": "tastyyyy",
+      "timedate": "2022-05-23T13:38:00.998Z",
+      "replied_to": null,
+      "post": 11,
+      "likes": [],
+      "tags": []
+    }
+  },
+  {
+    "model": "feed.comment",
+    "pk": 11,
+    "fields": {
+      "commentor": 2,
+      "content": "😂😂😂😂😂😂😂",
+      "timedate": "2022-05-23T13:39:46.872Z",
+      "replied_to": null,
+      "post": 13,
+      "likes": [],
+      "tags": []
+    }
+  },
+  {
+    "model": "feed.comment",
+    "pk": 13,
+    "fields": {
+      "commentor": 14,
+      "content": "wow",
+      "timedate": "2022-07-30T06:45:52.587Z",
+      "replied_to": null,
+      "post": 13,
+      "likes": [2],
+      "tags": []
+    }
+  },
+  {
+    "model": "feed.story",
+    "pk": 1,
+    "fields": {
+      "creator": 3,
+      "timedate": "2022-09-02T03:51:18Z",
+      "image": "profile-3/stories/story-None.jpg",
+      "close": false,
+      "post": null,
+      "seen": []
+    }
+  },
+  {
+    "model": "feed.story",
+    "pk": 2,
+    "fields": {
+      "creator": 14,
+      "timedate": "2022-09-02T04:16:01Z",
+      "image": "profile-14/stories/story-None.jpg",
+      "close": false,
+      "post": null,
+      "seen": []
+    }
+  },
+  {
+    "model": "feed.story",
+    "pk": 3,
+    "fields": {
+      "creator": 2,
+      "timedate": "2022-09-02T04:26:15Z",
+      "image": "profile-2/stories/story-None.jpg",
+      "close": false,
+      "post": null,
+      "seen": []
+    }
+  },
+  {
+    "model": "feed.story",
+    "pk": 4,
+    "fields": {
+      "creator": 2,
+      "timedate": "2022-09-02T04:26:44Z",
+      "image": "profile-2/stories/story-None_L1WFwx0.JPG",
+      "close": false,
+      "post": null,
+      "seen": []
+    }
+  },
+  {
+    "model": "feed.story",
+    "pk": 5,
+    "fields": {
+      "creator": 2,
+      "timedate": "2022-09-02T04:27:07Z",
+      "image": "profile-2/stories/story-None_kWmHISb.jpg",
+      "close": false,
+      "post": null,
+      "seen": []
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2022-05-20T14:01:08.045Z",
+      "user": 1,
+      "content_type": 1,
+      "object_id": "1",
+      "object_repr": "bb profile",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2022-05-20T14:14:17.143Z",
+      "user": 1,
+      "content_type": 1,
+      "object_id": "1",
+      "object_repr": "bb profile",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2022-05-20T15:21:37.622Z",
+      "user": 1,
+      "content_type": 1,
+      "object_id": "2",
+      "object_repr": "anu.rag__r profile",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Verified\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2022-05-21T05:02:45.255Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "7",
+      "object_repr": "mohit123@gmail.com",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2022-05-22T04:39:09.381Z",
+      "user": 1,
+      "content_type": 2,
+      "object_id": "6",
+      "object_repr": "VerifyTable object (6)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2022-07-10T12:42:57.702Z",
+      "user": 17,
+      "content_type": 1,
+      "object_id": "13",
+      "object_repr": "prrtk profile",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Followers\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2022-07-30T06:30:42.932Z",
+      "user": 17,
+      "content_type": 11,
+      "object_id": "19",
+      "object_repr": "gauravkumar5089@gmail.com",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2022-07-30T06:31:46.267Z",
+      "user": 17,
+      "content_type": 2,
+      "object_id": "16",
+      "object_repr": "VerifyTable object (16)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2022-07-30T06:31:54.735Z",
+      "user": 17,
+      "content_type": 2,
+      "object_id": "15",
+      "object_repr": "VerifyTable object (15)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2022-07-30T06:31:54.742Z",
+      "user": 17,
+      "content_type": 2,
+      "object_id": "13",
+      "object_repr": "VerifyTable object (13)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2022-07-30T06:31:54.748Z",
+      "user": 17,
+      "content_type": 2,
+      "object_id": "12",
+      "object_repr": "VerifyTable object (12)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2022-07-30T06:31:54.753Z",
+      "user": 17,
+      "content_type": 2,
+      "object_id": "4",
+      "object_repr": "VerifyTable object (4)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2022-07-30T06:32:13.519Z",
+      "user": 17,
+      "content_type": 11,
+      "object_id": "20",
+      "object_repr": "gauravkumar5089@gmail.com",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2022-07-30T06:39:55.475Z",
+      "user": 17,
+      "content_type": 11,
+      "object_id": "21",
+      "object_repr": "gauravkumar5089@gmail.com",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2022-07-30T06:40:02.562Z",
+      "user": 17,
+      "content_type": 2,
+      "object_id": "17",
+      "object_repr": "VerifyTable object (17)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2022-09-01T11:38:52.169Z",
+      "user": 17,
+      "content_type": 5,
+      "object_id": "9",
+      "object_repr": " online_destroyed",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2022-09-02T03:52:05.937Z",
+      "user": 17,
+      "content_type": 6,
+      "object_id": "1",
+      "object_repr": "Story object (1)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2022-09-02T04:17:23.487Z",
+      "user": 17,
+      "content_type": 6,
+      "object_id": "2",
+      "object_repr": "Story object (2)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2022-09-02T04:26:41.865Z",
+      "user": 17,
+      "content_type": 6,
+      "object_id": "3",
+      "object_repr": "Story object (3)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+      "action_time": "2022-09-02T04:27:05.348Z",
+      "user": 17,
+      "content_type": 6,
+      "object_id": "4",
+      "object_repr": "Story object (4)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+      "action_time": "2022-09-02T04:27:24.536Z",
+      "user": 17,
+      "content_type": 6,
+      "object_id": "5",
+      "object_repr": "Story object (5)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add profile",
+      "content_type": 1,
+      "codename": "add_profile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change profile",
+      "content_type": 1,
+      "codename": "change_profile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete profile",
+      "content_type": 1,
+      "codename": "delete_profile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view profile",
+      "content_type": 1,
+      "codename": "view_profile"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add verify table",
+      "content_type": 2,
+      "codename": "add_verifytable"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change verify table",
+      "content_type": 2,
+      "codename": "change_verifytable"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete verify table",
+      "content_type": 2,
+      "codename": "delete_verifytable"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view verify table",
+      "content_type": 2,
+      "codename": "view_verifytable"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add reset table",
+      "content_type": 3,
+      "codename": "add_resettable"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change reset table",
+      "content_type": 3,
+      "codename": "change_resettable"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete reset table",
+      "content_type": 3,
+      "codename": "delete_resettable"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view reset table",
+      "content_type": 3,
+      "codename": "view_resettable"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add comment",
+      "content_type": 4,
+      "codename": "add_comment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change comment",
+      "content_type": 4,
+      "codename": "change_comment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete comment",
+      "content_type": 4,
+      "codename": "delete_comment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view comment",
+      "content_type": 4,
+      "codename": "view_comment"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add post",
+      "content_type": 5,
+      "codename": "add_post"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change post",
+      "content_type": 5,
+      "codename": "change_post"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete post",
+      "content_type": 5,
+      "codename": "delete_post"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view post",
+      "content_type": 5,
+      "codename": "view_post"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add story",
+      "content_type": 6,
+      "codename": "add_story"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change story",
+      "content_type": 6,
+      "codename": "change_story"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete story",
+      "content_type": 6,
+      "codename": "delete_story"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view story",
+      "content_type": 6,
+      "codename": "view_story"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add activity",
+      "content_type": 7,
+      "codename": "add_activity"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change activity",
+      "content_type": 7,
+      "codename": "change_activity"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete activity",
+      "content_type": 7,
+      "codename": "delete_activity"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view activity",
+      "content_type": 7,
+      "codename": "view_activity"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 8,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 8,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 8,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 8,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 9,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 9,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 9,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 9,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 10,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 10,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 10,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 10,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 11,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 11,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 11,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 11,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 12,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 12,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 12,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 12,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 13,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 13,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 13,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 13,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$UHhNuSRHYgI6QckuIYFMn1$MY6y9jT9NKApUhoFAF7QbvNQ1kA/Z4Yr93sn3swftxk=",
+      "last_login": "2022-05-20T15:21:20.851Z",
+      "is_superuser": true,
+      "username": "bb",
+      "first_name": "",
+      "last_name": "",
+      "email": "bb@bb.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2022-05-20T12:46:56.889Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$d0EXdWltM8siNCiqJnofLo$CjUt1XxjeBaIGlRiy5WbkLOC9aPR4c9Jlunij98+8lc=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "kumarayush1014@gmail.com",
+      "first_name": "",
+      "last_name": "",
+      "email": "kumarayush1014@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-05-20T14:30:22.905Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$x2XbCymXyTY4T45UpCzdTD$IioQnCbd65bTWnbSSbe5TRbV3uBVcVPuxPbdXRZy7wA=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "singhveerbahadur18@gmail.com",
+      "first_name": "",
+      "last_name": "",
+      "email": "singhveerbahadur18@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-05-20T15:54:46.823Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$IVw3SaVXwINiLCNhJcAsW5$Nps+WG7Ac8NiQsoYYGNqYrjZW7T+lDdzwL9T8ZDT3oI=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "kiranpragya2003@gmail.com",
+      "first_name": "",
+      "last_name": "",
+      "email": "kiranpragya2003@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-05-20T16:52:54.521Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$Ws6X1Zqz4KGywvHmuE2LHY$1l8WGYud5LFarP5pZ52kSHx3CaLl2+U028IgCNIXQuE=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "arvinddakshana20@gmail.com",
+      "first_name": "",
+      "last_name": "",
+      "email": "arvinddakshana20@gmail.com",
+      "is_staff": false,
+      "is_active": false,
+      "date_joined": "2022-05-21T04:17:21.614Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$QTtRHgbTpsHED9rbR1DYKP$RTMbVSZXu4nZzBn9pA6Ri6/dl7L2NrVYHk3/n6SXkGg=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "adityakumarjnv2002@gmail.com",
+      "first_name": "",
+      "last_name": "",
+      "email": "adityakumarjnv2002@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-05-21T04:18:47.797Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 8,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$SKWLyw0Qiw6diyD6MiNBX6$COeRpSQyoEzf/R2iWDsGr/7eWAup+IN+HOWqo7rtV/U=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "mchouhan.daan20@gmail.com",
+      "first_name": "",
+      "last_name": "",
+      "email": "mchouhan.daan20@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-05-21T04:25:15.349Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 9,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$DSgUVuq40qO75ptUiY12uU$NOoBcgoqtm48S569dUVKqvZ38SUkMBiYZxJsV+4dikk=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "bishop8743@gmail.com",
+      "first_name": "",
+      "last_name": "",
+      "email": "bishop8743@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-05-21T04:26:55.090Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 10,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$R4G1DBYhsXyji3BCrVdSEo$N09BJprPg05ygA6WgcqIdSasKPIB6XrXx3EbyKQINz4=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "sumankumarnst@gmail.com",
+      "first_name": "",
+      "last_name": "",
+      "email": "sumankumarnst@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-05-21T04:28:42.436Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 11,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$ltAPVcTmsVoo1gybQjdEoi$+YnVg4C2GDj/ozPauK2e78Ol6NsZjVBEy2HNL7MqwB0=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "chandan.dak216@gmail.com",
+      "first_name": "",
+      "last_name": "",
+      "email": "chandan.dak216@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-05-21T04:33:27.561Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 12,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$FBOXa6IhyvYBG4i5BmgGvO$vMlQEEmRys6a3EWWVmr/TQxMCZ6vz5MD7hiawMsgVIk=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "gaanamusic7@gmail.com",
+      "first_name": "",
+      "last_name": "",
+      "email": "gaanamusic7@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-05-21T04:41:33.922Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 13,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$Mw8WRNSjfOU2syU9njhfZq$SKRxJiohYwGjE5BAclQWCaA0W31Gl8IF3RBTWuMunN8=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "mk8002275003@gmail.com",
+      "first_name": "",
+      "last_name": "",
+      "email": "mk8002275003@gmail.com",
+      "is_staff": false,
+      "is_active": false,
+      "date_joined": "2022-05-21T04:41:50.089Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 14,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$MXXTEUZcwNOf0F1xobjETi$esgVvlboqmVrj/Lttz5VTb//IM+smdHgn1XgnFfmfaY=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "ashu.dak20@gmail.com",
+      "first_name": "",
+      "last_name": "",
+      "email": "ashu.dak20@gmail.com",
+      "is_staff": false,
+      "is_active": false,
+      "date_joined": "2022-05-21T05:18:25.937Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 15,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$MAt16T5A3GR26SFPiQ13hZ$K9hiu6pouiIZ1f8imInIdnNzgXXIBmftUJiytn9Q84M=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "Pragat.gupta777@gmail.com",
+      "first_name": "",
+      "last_name": "",
+      "email": "Pragat.gupta777@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-05-21T11:05:04.841Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 16,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$kiYAx3QAsXOOMw6fukWTSy$rObqEicvS2ObWhvTbvvblBLuSF2jwxDOvhOrN0WXSYM=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "Sa8827619@gmail.com",
+      "first_name": "",
+      "last_name": "",
+      "email": "Sa8827619@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-05-23T05:28:54.008Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 17,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$TzcYHxj7biUogoAZ716XgH$GZTOj14u5dMNxMbvWHucUrnXqpSTvei13rHQi7Ul0LQ=",
+      "last_login": "2022-09-01T11:36:34.545Z",
+      "is_superuser": true,
+      "username": "bbb",
+      "first_name": "",
+      "last_name": "",
+      "email": "bb@b.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2022-07-10T12:18:28.816Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 18,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$y2fZCYpQ4B09v9imbufbgY$8eQXzeTrjbhNuOaScoi55K8sgMKHxrqLdtQcopeCYoM=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "pratikdak1820@gmail.com",
+      "first_name": "",
+      "last_name": "",
+      "email": "pratikdak1820@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-07-10T12:33:04.986Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 22,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$BTr5ySXTYCF5CmqPoA4eLx$I9fdyf61P7oH8xUcTeZzCisfXITIrRqPQ8Q3RzdrAyM=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "r.bhanu@iitg.ac.in",
+      "first_name": "",
+      "last_name": "",
+      "email": "r.bhanu@iitg.ac.in",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-07-30T06:44:01.144Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": { "app_label": "users", "model": "profile" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": { "app_label": "users", "model": "verifytable" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": { "app_label": "users", "model": "resettable" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": { "app_label": "feed", "model": "comment" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": { "app_label": "feed", "model": "post" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": { "app_label": "feed", "model": "story" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": { "app_label": "feed", "model": "activity" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": { "app_label": "admin", "model": "logentry" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": { "app_label": "auth", "model": "permission" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": { "app_label": "auth", "model": "group" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": { "app_label": "auth", "model": "user" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": { "app_label": "contenttypes", "model": "contenttype" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": { "app_label": "sessions", "model": "session" }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "6pn7ramwzu9h0iovv1bvdly952m8c8ql",
+    "fields": {
+      "session_data": ".eJxVjEsOwjAMBe-SNYoc0qQ1S_Y9Q2XHDi2gROpnhbg7VOoCtm9m3ssMtK3jsC06D5OYi3GtOf2OTOmhZSdyp3KrNtWyzhPbXbEHXWxfRZ_Xw_07GGkZvzVyDMIMEMirw4CAURJLzqjnqBzEeQzQsG_IQdYWSTw0XUrEgJ0z7w8ZAjhh:1oHfzY:A5y2lJ7Utos4DTPdJmV04K06-0z79Z98ZxOuUASSGiA",
+      "expire_date": "2022-08-13T06:30:28.922Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "6vlps7zamzmjk6xj5ee7x8c9gzjztok0",
+    "fields": {
+      "session_data": ".eJxVjEsOwjAMBe-SNYoc0qQ1S_Y9Q2XHDi2gROpnhbg7VOoCtm9m3ssMtK3jsC06D5OYi3GtOf2OTOmhZSdyp3KrNtWyzhPbXbEHXWxfRZ_Xw_07GGkZvzVyDMIMEMirw4CAURJLzqjnqBzEeQzQsG_IQdYWSTw0XUrEgJ0z7w8ZAjhh:1oTiUs:20RYmt0_UeJznsrQq9kolhcwmsv49x7OVFNiexP3sDY",
+      "expire_date": "2022-09-15T11:36:34.553Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "htdrvxsitmvjkf8vkg2x6ixl6ghkr8gx",
+    "fields": {
+      "session_data": ".eJxVjEsOwjAMBe-SNYoc0qQ1S_Y9Q2XHDi2gROpnhbg7VOoCtm9m3ssMtK3jsC06D5OYi3GtOf2OTOmhZSdyp3KrNtWyzhPbXbEHXWxfRZ_Xw_07GGkZvzVyDMIMEMirw4CAURJLzqjnqBzEeQzQsG_IQdYWSTw0XUrEgJ0z7w8ZAjhh:1oAVtU:byiNl9u2pO8vRVQ6uvA57-V_HFbXRxu5IrCKCzqwrOQ",
+      "expire_date": "2022-07-24T12:18:36.918Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "iyvz1ycbebfe0mp1s4p4jl2yr6snsi2r",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2hBG6QAu3XuGZmAGqRpISrsy3l2bdKHb_977LzXSupRx7TKPE6uzAnX43SKlh9QN8J3qrenU6jJPUW-K3mnX18byvOzu30GhXr41mhRDBPDA-WT5mBlh8Di4kJBFsiAn642BDGRtMJ7JOTLkCYgDRvX-AOhIODA:1ns4RM:wbLstBCR8Kna4usS7g05SFGRXPMHG8wbkBOfRJSC0_8",
+      "expire_date": "2022-06-03T15:21:20.852Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "pwu7027vnfuc8y2c81yuu775yealj8ll",
+    "fields": {
+      "session_data": ".eJxVjEEOwiAQRe_C2hBG6QAu3XuGZmAGqRpISrsy3l2bdKHb_977LzXSupRx7TKPE6uzAnX43SKlh9QN8J3qrenU6jJPUW-K3mnX18byvOzu30GhXr41mhRDBPDA-WT5mBlh8Di4kJBFsiAn642BDGRtMJ7JOTLkCYgDRvX-AOhIODA:1ns25i:XzPNeWiiFpBt2PTl-3HpecuPYfA5BLjWBAZdKo10DTw",
+      "expire_date": "2022-06-03T12:50:50.304Z"
+    }
+  }
+]

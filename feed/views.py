@@ -147,8 +147,63 @@ def getImageBytes(imagePath):
     string_image = str(b)
     ratio = h/w
     return string_image,ratio
+def time_ago(time_created):
+    time_now = datetime.datetime.now(tz=utc)
+    diff = time_now - time_created
+    days = diff.days
+    seconds = diff.seconds
+    years = days // 365
+    months = days // 30
+    hours = seconds // 3600
+    minutes = (seconds % 3600) // 60
+    second = seconds % 60
+    if days == 0:
+        if hours == 0:
+            if minutes == 0:
+                delta = f'{second} s'
+            else:
+                delta = f'{minutes} m'
+        else:
+            delta = f'{hours} h'
+    else:
+        delta = f'{days} d'
+    return delta
+def my_story(me):
+    all_str = []
+    for story in me.all_stories.all():
+        data = {
+            'id':story.id,
+            'url':story.image.url,
+            'ago':time_ago(story.timedate)
+        }
+        all_str.append(data)
+    return all_str
 
-
+def json_story(me):
+    all_str = []
+    for user in me.followers.all():
+        if user.dp:
+            url = user.dp.url
+        else:
+            url = ''
+        story_json = {
+            'stories':[],
+            'user': {
+                'username': user.username,
+                'authorDp':url
+            }
+        }
+        if user.all_stories.all().count()!=0:
+            for story in user.all_stories.all():
+                if me not in story.seen.all():
+                    data = {
+                        'id':story.id,
+                        'url':story.image.url,
+                        'ago':time_ago(story.timedate)
+                    }
+                    story_json['stories'].append(data)
+            all_str.append(story_json)
+    return all_str
 
 def json_post(post,me):
     if post.creator.dp:
@@ -380,3 +435,17 @@ def like_comment(request,index):
         response = Response({"message":"no such comment"},status=status.HTTP_404_NOT_FOUND)
         return response
 
+@api_view(['GET'])
+@login_is_required
+def get_stories(request):
+    stories = json_story(request.user)
+    response = Response(stories,status=status.HTTP_200_OK)
+    set_token(response,request.user)
+    return response
+@api_view(['GET'])
+@login_is_required
+def getmystory(request):
+    stories = my_story(request.user)
+    response = Response(stories,status=status.HTTP_200_OK)
+    set_token(response,request.user)
+    return response

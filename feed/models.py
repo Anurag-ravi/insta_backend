@@ -12,6 +12,9 @@ ACT_CHOICES = (
 def post_path(instance, filename):
     ext = filename.split('.')[-1]
     return 'profile-{}/posts/post-{}.{}'.format(instance.creator.id,instance.id,ext)
+def story_path(instance, filename):
+    ext = filename.split('.')[-1]
+    return 'profile-{}/stories/story-{}.{}'.format(instance.creator.id,instance.id,ext)
 
 
 class Post(models.Model):
@@ -39,9 +42,9 @@ class Comment(models.Model):
         return f'{self.content}'
 
 class Story(models.Model):
-    creator = models.ForeignKey('users.Profile',on_delete=models.CASCADE)
+    creator = models.ForeignKey('users.Profile',related_name='all_stories',on_delete=models.CASCADE)
     timedate = models.DateTimeField(default=timezone.datetime.now)
-    image = models.ImageField(upload_to=post_path,blank=True,null=True)
+    image = models.ImageField(upload_to=story_path,blank=True,null=True)
     seen = models.ManyToManyField('users.Profile',related_name='seen_stories',related_query_name='seen_stories',blank=True)
     close = models.BooleanField(default=False)
     post = models.ForeignKey('Post',on_delete=models.CASCADE,blank=True,null=True)

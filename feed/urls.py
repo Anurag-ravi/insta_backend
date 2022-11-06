@@ -13,6 +13,8 @@ urlpatterns = [
     path('comment/edit/<int:index>/', views.update_comment),
     path('comment/delete/<int:index>/', views.delete_comment),
 
+    path('stories/all/', views.get_stories),
+    path('stories/me/', views.getmystory),
     
     path('feed/<int:index>/', views.get_feed),
 ]
