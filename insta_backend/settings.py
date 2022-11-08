@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'insta_backend.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-if DEBUG:
+if not DEBUG:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -154,10 +154,11 @@ EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'teaminstaclone@gmail.com'
-EMAIL_HOST_PASSWORD = 'tovyhuknljyhnisw'
+EMAIL_HOST_PASSWORD = 'ljydfsnadrfucfoo'
 EMAIL_USE_TLS = True
 
-CORS_ORIGIN_ALLOW_ALL = False
-CORS_ORIGIN_WHITELIST = (
-  'http://127.0.0.1:5500',
-)
+CORS_ORIGIN_ALLOW_ALL = True
+#CORS_ORIGIN_WHITELIST = (
+#  'http://127.0.0.1:5500',
+#  'https://instagram.anuragravi.tech',
+#)
