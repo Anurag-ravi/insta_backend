@@ -18,6 +18,9 @@ from PIL import Image,ImageFilter
 
 # Create your views here.
 @api_view(['POST'])
+def check(request):
+    return Response({'status':'ok'},status=status.HTTP_200_OK)
+@api_view(['POST'])
 @login_is_required
 def create_post(request):
     serializer = PostSerializer(data=request.data)
