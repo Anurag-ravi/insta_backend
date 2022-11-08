@@ -17,7 +17,7 @@ from django.utils import timezone
 from PIL import Image,ImageFilter
 
 # Create your views here.
-@api_view(['POST'])
+@api_view(['GET'])
 def check(request):
     return Response({'status':'ok'},status=status.HTTP_200_OK)
 @api_view(['POST'])
