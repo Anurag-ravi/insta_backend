@@ -8,3 +8,4 @@ media
 env
 static_files
 backups
+.env

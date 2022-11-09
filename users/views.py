@@ -19,7 +19,7 @@ from fuzzywuzzy import fuzz
 @api_view(['POST'])
 def register(request):
     # try:
-        data=json.loads(request.body)
+        data=request.data
         email = data['email']
         password = data['password']
         user,created= create_or_get_user(request,email,password)
@@ -83,7 +83,7 @@ def generate_token(profile):
 @api_view(['POST'])
 def login(request):
     # try:
-        data=json.loads(request.body)
+        data=request.data
         email = data['email']
         password = data['password']
         user1 = User.objects.filter(email=email).first()
@@ -110,7 +110,7 @@ def login(request):
 
 @api_view(['POST'])
 def reset_pass(request):
-    data=json.loads(request.body)
+    data=request.data
     email = data['email']
     user = User.objects.filter(email=email).first()
     if not user:
