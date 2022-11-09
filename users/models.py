@@ -25,7 +25,11 @@ class Profile(models.Model):
 class VerifyTable(models.Model):
     hash = models.CharField(max_length=20,unique=True)
     email = models.CharField(max_length=200)
+    def __str__(self):
+        return f'{self.email} verification'
 
 class ResetTable(models.Model):
     hash = models.CharField(max_length=20,unique=True)
     email = models.CharField(max_length=200)
+    def __str__(self):
+        return f'{self.email} reset'
