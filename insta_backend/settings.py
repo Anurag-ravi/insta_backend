@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne',
     'users',
     'feed',
     'chat',
@@ -44,7 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_archive',
     'rest_framework',
-     'corsheaders',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -76,12 +77,13 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'insta_backend.wsgi.application'
+# WSGI_APPLICATION = 'insta_backend.wsgi.application'
+ASGI_APPLICATION = 'insta_backend.asgi.application'
 
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-if not DEBUG:
+if  DEBUG:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
