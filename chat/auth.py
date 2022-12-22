@@ -34,7 +34,10 @@ class TokenAuthMiddleware:
         # Look up user from query string (you should also do things like
         # checking if it is a valid user ID, or if scope["user"] is already
         # populated).
-        token = scope["query_string"].decode().split("=")[1]
+        try:
+            token = scope["query_string"].decode().split("=")[1]
+        except:
+            token = "alkcnalkcnsLkcns"
         scope['user'] = await get_user(token)
 
         return await self.app(scope, receive, send)
