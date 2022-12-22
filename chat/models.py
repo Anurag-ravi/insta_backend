@@ -19,3 +19,8 @@ class Message(models.Model):
 
     def __str__(self):
         return f'{self.text} {self.to.username} {self.by.username}'
+    
+class AnoUser(models.Model):
+    def is_anonymous(self):
+        return True
+    

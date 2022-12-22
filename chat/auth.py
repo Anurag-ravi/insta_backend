@@ -1,24 +1,23 @@
 import time
 from channels.db import database_sync_to_async
 import jwt
+from chat.models import AnoUser
 from insta_backend import settings
 from users.models import Profile
-from django.contrib.auth.models import AnonymousUser
 
 @database_sync_to_async
 def get_user(token):
     try:
         payload = jwt.decode(token, settings.SECRET_KEY, algorithms=['HS256'])
     except:
-        return AnonymousUser()
+        return AnoUser()
     expires = int(time.time())
     if(payload['exp'] < expires ):
-        return AnonymousUser()
+        return AnoUser()
     try:
         profile = Profile.objects.filter(id = payload['profile_id']).first()
     except:
-        return AnonymousUser()
-    print(profile.name)
+        return AnoUser()
     return profile
 
 class TokenAuthMiddleware:
