@@ -77,7 +77,7 @@ TEMPLATES = [
     },
 ]
 
-# WSGI_APPLICATION = 'insta_backend.wsgi.application'
+WSGI_APPLICATION = 'insta_backend.wsgi.application'
 ASGI_APPLICATION = 'insta_backend.asgi.application'
 
 
@@ -120,7 +120,14 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [("localhost", 6379)],
+        },
+    },
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
