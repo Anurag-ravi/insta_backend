@@ -21,6 +21,9 @@ class Profile(models.Model):
     
     def __str__(self):
         return f'{self.username} profile'
+    
+    def is_anonymous(self):
+        return False
 
 class VerifyTable(models.Model):
     hash = models.CharField(max_length=20,unique=True)
