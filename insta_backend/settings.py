@@ -128,6 +128,11 @@ CHANNEL_LAYERS = {
         },
     },
 }
+# CHANNEL_LAYERS = {
+#     "default": {
+#         "BACKEND": "channels.layers.InMemoryChannelLayer"
+#     }
+# }
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/

@@ -11,6 +11,7 @@ import os
 from channels.routing import ProtocolTypeRouter,URLRouter
 from django.core.asgi import get_asgi_application
 from chat import routing as chat_routing
+from chat.auth import TokenAuthMiddleware
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'insta_backend.settings')
 django.setup()
@@ -18,8 +19,10 @@ django.setup()
 application = ProtocolTypeRouter(
     {
         # "http": get_asgi_application(),
-        "websocket": URLRouter(
+        "websocket": TokenAuthMiddleware(
+            URLRouter(
                 chat_routing.websocket_urlpatterns
-            ),
+            )
+        ),
     }
 )
