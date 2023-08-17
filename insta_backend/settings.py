@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_archive',
     'rest_framework',
     'corsheaders',
 ]
@@ -98,7 +97,7 @@ else:
         'USER': os.getenv('DB_USER'),
         'PASSWORD': os.getenv('DB_PASSWORD'),
         'HOST': os.getenv('DB_HOST'),
-        'PORT': '',
+        'PORT': '5432',
     }
 }
 
